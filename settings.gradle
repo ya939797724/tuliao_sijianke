@@ -1,2 +1,3 @@
+include ':mvvmcore'
 include ':app'
 rootProject.name = "Tuliao_pro"
