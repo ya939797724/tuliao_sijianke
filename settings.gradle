@@ -1,2 +1,3 @@
+include ':img'
 include ':app'
 rootProject.name = "Tuliao_pro"
