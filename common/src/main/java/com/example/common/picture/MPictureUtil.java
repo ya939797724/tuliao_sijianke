@@ -3,6 +3,9 @@ package com.example.common.picture;
 import android.content.Context;
 import android.widget.ImageView;
 
+import com.example.common.picture.api.IPicture;
+import com.example.common.picture.impl.GlideImpl;
+
 public class MPictureUtil {
     private static volatile MPictureUtil util;
     public static MPictureUtil getInstance(){
@@ -15,11 +18,14 @@ public class MPictureUtil {
         }
         return util;
     }
+    public static void init(IPicture pictureImpl){
+        picture = pictureImpl;
+    }
 
     public MPictureUtil() {
     }
 
-    private IPicture picture;
+    private static IPicture picture = new GlideImpl();
 
     void defaultImage(Context context, Object url, ImageView iv){
         picture.defaultImage(context, url, iv);
