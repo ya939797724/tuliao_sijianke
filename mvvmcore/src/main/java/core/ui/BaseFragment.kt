@@ -12,7 +12,6 @@ abstract class BaseFragment : Fragment(),IFragment {
     protected var mView:View? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         mView = inflater.inflate(layoutID(),container,false)
-        initView()
         return mView
     }
 
