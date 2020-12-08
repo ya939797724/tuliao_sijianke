@@ -1,6 +1,4 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.android.library'
 
 def libs = rootProject.ext.dependencies
 def appInfo = rootProject.ext.android
@@ -16,6 +14,7 @@ android {
         versionName appInfo.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -24,26 +23,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation libs.corektx
     implementation libs.appcompat
     implementation libs.constraintlayout
-    implementation project(path: ':baseview')
     testImplementation libs.junit
     androidTestImplementation libs.espresso
     androidTestImplementation libs.extjunit
     implementation libs.coroutines
     implementation libs.material
+    implementation libs.glide
 
 }

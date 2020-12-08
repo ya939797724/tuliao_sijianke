@@ -1,3 +1,4 @@
+include ':baseview'
 include ':mvvmcore'
 include ':img'
 include ':common'
