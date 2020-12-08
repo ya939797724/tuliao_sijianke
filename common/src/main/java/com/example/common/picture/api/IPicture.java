@@ -1,4 +1,4 @@
-package com.example.common.picture;
+package com.example.common.picture.api;
 
 import android.content.Context;
 import android.widget.ImageView;
