@@ -7,20 +7,15 @@
         <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-<<<<<<< HEAD
         <option name="gradleHome" value="E:/专高3/gradle-6.1.1" />
-=======
->>>>>>> 84ff6c81bcd0dd73ba1da358bad7d3a72bdd64eb
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/img" />
-<<<<<<< HEAD
-=======
             <option value="$PROJECT_DIR$/mvvmcore" />
->>>>>>> 84ff6c81bcd0dd73ba1da358bad7d3a72bdd64eb
+            <option value="$PROJECT_DIR$/net" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
