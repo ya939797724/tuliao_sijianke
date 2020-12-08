@@ -1,14 +1,17 @@
 apply plugin: 'com.android.library'
 
+def libs = rootProject.ext.dependencies
+def appInfo = rootProject.ext.android
+
 android {
-    compileSdkVersion 29
-    buildToolsVersion "30.0.1"
+    compileSdkVersion appInfo.compileSdkVersion
+    buildToolsVersion appInfo.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 24
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion appInfo.minSdkVersion
+        targetSdkVersion appInfo.targetSdkVersion
+        versionCode appInfo.versionCode
+        versionName appInfo.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -24,9 +27,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation libs.appcompat
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.espresso
+    androidTestImplementation libs.extjunit
+    implementation libs.coroutines
+    implementation libs.material
+    implementation libs.glide
 }

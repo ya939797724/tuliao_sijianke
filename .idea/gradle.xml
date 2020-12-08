@@ -7,24 +7,16 @@
         <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-<<<<<<< HEAD
-            <option value="$PROJECT_DIR$/mvvmcore" />
-=======
-<<<<<<< HEAD
-            <option value="$PROJECT_DIR$/img" />
-=======
             <option value="$PROJECT_DIR$/common" />
->>>>>>> aec6c96800eed9b74dd158b574814442f60922a2
->>>>>>> 6e64f2b9ce48877a6e7008f313ef21d50aa520d8
+            <option value="$PROJECT_DIR$/img" />
+            <option value="$PROJECT_DIR$/mvvmcore" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
-        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>
