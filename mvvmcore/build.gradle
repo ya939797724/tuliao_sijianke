@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 def libs = rootProject.ext.dependencies
 def appInfo = rootProject.ext.android
@@ -23,10 +25,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    android{
+        dataBinding {
+            enabled = true
+        }
+    }
+
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation libs.corektx
     implementation libs.appcompat
     implementation libs.constraintlayout
     testImplementation libs.junit
@@ -34,5 +45,5 @@ dependencies {
     androidTestImplementation libs.extjunit
     implementation libs.coroutines
     implementation libs.material
-    implementation libs.glide
+
 }
