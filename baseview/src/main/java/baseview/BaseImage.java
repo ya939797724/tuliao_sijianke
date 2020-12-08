@@ -1,20 +1,31 @@
 package baseview;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.os.Build;
 import android.util.AttributeSet;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
-public class BaseImage extends androidx.appcompat.widget.AppCompatImageView {
+class BaseImage extends androidx.appcompat.widget.AppCompatImageView {
     private int defaultWidth = 200;
     private int defaultHeight = 100;
+    private Paint paint;
+    private int imgPath = 0;
 
     public BaseImage(Context context) {
         super(context);
+        init();
     }
 
     public BaseImage(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public BaseImage(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
@@ -36,5 +47,29 @@ public class BaseImage extends androidx.appcompat.widget.AppCompatImageView {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @SuppressLint({"UseCompatLoadingForDrawables", "DrawAllocation"})
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        if (imgPath!=0){
+            Bitmap bitmap = BitmapFactory.decodeResource(getContext().getResources(),imgPath);
+            canvas.drawBitmap(bitmap,null,paint);
+        }
 
+    }
+
+    private void init() {
+        paint = new Paint();
+    }
+
+    public void setImgPath(int path){
+        imgPath = path;
+        postInvalidate();
+    }
+
+    public void setImageWidth(int width){
+        defaultWidth = width;
+        requestLayout();
+    }
 }
