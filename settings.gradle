@@ -1,7 +1,5 @@
-<<<<<<< HEAD
+
 include ':img'
-=======
 include ':common'
->>>>>>> aec6c96800eed9b74dd158b574814442f60922a2
 include ':app'
 rootProject.name = "Tuliao_pro"
