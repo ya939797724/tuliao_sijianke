@@ -1,3 +1,11 @@
+<<<<<<< HEAD
 include ':mvvmcore'
+=======
+<<<<<<< HEAD
+include ':img'
+=======
+include ':common'
+>>>>>>> aec6c96800eed9b74dd158b574814442f60922a2
+>>>>>>> 6e64f2b9ce48877a6e7008f313ef21d50aa520d8
 include ':app'
 rootProject.name = "Tuliao_pro"
