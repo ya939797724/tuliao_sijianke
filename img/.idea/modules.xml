@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1322174874/GISIM.iml" filepath="$PROJECT_DIR$/.idea/modules/1322174874/GISIM.iml" group="GISIM" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1356022828/app.iml" filepath="$PROJECT_DIR$/.idea/modules/1356022828/app.iml" group="GISIM/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/img.iml" filepath="$PROJECT_DIR$/.idea/modules/img.iml" group="GISIM/img" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1140082028/mvvmcore.iml" filepath="$PROJECT_DIR$/.idea/modules/-1140082028/mvvmcore.iml" group="GISIM/mvvmcore" />
+    </modules>
+  </component>
+</project>
