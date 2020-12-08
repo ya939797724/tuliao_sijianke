@@ -11,20 +11,7 @@ import core.api.IFragment
 abstract class BaseFragment : Fragment(),IFragment {
     protected var mView:View? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-<<<<<<< HEAD
-        mView = inflater.inflate(bandLayout(),container,false)
-        initView()
-        return mView
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        initData()
-        initEvent()
-    }
-
-=======
-        mView = inflater.inflate(layoutID(),null)
+        mView = inflater.inflate(layoutID(),container,false)
         return mView
     }
 
@@ -33,7 +20,6 @@ abstract class BaseFragment : Fragment(),IFragment {
         initData()
         initView()
     }
->>>>>>> 8a0a215e5c35591f4a4e651e2b8e442cf13725d6
 
     override fun onResume() {
         super.onResume()
