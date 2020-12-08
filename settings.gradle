@@ -1,4 +1,5 @@
 include ':net'
+include ':mvp'
 include ':mvvmcore'
 include ':img'
 include ':common'
