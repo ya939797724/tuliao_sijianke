@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class IconView extends androidx.appcompat.widget.AppCompatImageView {
-    private float
+
     public IconView(@NonNull Context context) {
         super(context);
     }
