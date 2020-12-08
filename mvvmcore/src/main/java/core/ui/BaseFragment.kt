@@ -11,10 +11,15 @@ abstract class BaseFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         mView = inflater.inflate(bandLayout(),container,false)
         initView()
-        initData()
-        initEvent()
         return mView
     }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        initData()
+        initEvent()
+    }
+
 
     override fun onResume() {
         super.onResume()
