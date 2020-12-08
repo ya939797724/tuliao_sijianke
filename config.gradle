@@ -38,6 +38,7 @@ ext{
             extjunit:"androidx.test.ext:junit:$dependenciesVersion.extjunit",
             espresso:"androidx.test.espresso:espresso-core:$dependenciesVersion.espresso",
             retrofitcoroutines:"com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$dependenciesVersion.retrofitcoroutines",
+
             coroutines:"org.jetbrains.kotlinx:kotlinx-coroutines-core:$dependenciesVersion.coroutines",
             okhttp:"com.squareup.okhttp3:okhttp:$dependenciesVersion.okhttp",
             interceptor:"com.squareup.okhttp3:logging-interceptor:$dependenciesVersion.interceptor",
@@ -46,6 +47,7 @@ ext{
             rxjava2:"com.squareup.retrofit2:adapter-rxjava2:$dependenciesVersion.rxjava2",
             rxjava:"io.reactivex.rxjava2:rxjava:$dependenciesVersion.rxjava",
             rxandroid:"io.reactivex.rxjava2:rxandroid:$dependenciesVersion.rxandroid",
+
             FlycoTabLayout_Lib:"com.flyco.tablayout:FlycoTabLayout_Lib:$dependenciesVersion.FlycoTabLayout_Lib",
             glide:"com.github.bumptech.glide:glide:$dependenciesVersion.glide",
             BaseRecyclerViewAdapterHelper:"com.github.CymChad:BaseRecyclerViewAdapterHelper:$dependenciesVersion.BaseRecyclerViewAdapterHelper",
