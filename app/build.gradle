@@ -39,6 +39,7 @@ dependencies {
     implementation libs.corektx
     implementation libs.appcompat
     implementation libs.constraintlayout
+    implementation project(path: ':baseview')
     implementation project(path: ':common')
     testImplementation libs.junit
     androidTestImplementation libs.espresso

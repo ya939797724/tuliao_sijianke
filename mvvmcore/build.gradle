@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'kotlin-kapt'
 def libs = rootProject.ext.dependencies
 def appInfo = rootProject.ext.android
 
@@ -26,7 +26,7 @@ android {
         }
     }
 
-    android{
+    android {
         dataBinding {
             enabled = true
         }
@@ -45,5 +45,6 @@ dependencies {
     androidTestImplementation libs.extjunit
     implementation libs.coroutines
     implementation libs.material
-
+    implementation 'com.google.dagger:dagger:2.23.2'
+    kapt 'com.google.dagger:dagger-compiler:2.23.2'
 }

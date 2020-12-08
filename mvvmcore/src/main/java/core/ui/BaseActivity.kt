@@ -1,37 +1,29 @@
 package core.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import core.api.IActivity
+import core.api.IView
 
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity : AppCompatActivity(),IActivity {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(bandLayout())
-
-        initView()
-
+        setContentView(layoutID())
         initData()
-
-        initEvent()
+        initView()
     }
 
-    abstract fun initEvent()
-
-    abstract fun initData()
-
-    abstract fun initView()
-
-    abstract fun bandLayout(): Int
-
-    fun showShortToast(msg:String){
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
+    override fun startActivity(activity: Class<*>?) {
+        val intent = Intent(this,activity)
+        startActivity(intent)
     }
 
-    fun showLongToast(msg:String){
-        Toast.makeText(this,msg,Toast.LENGTH_LONG).show()
+    override fun startActivity(activity: Class<*>?, data: Bundle?, paramName: String?) {
+        val intent = Intent(this,activity)
+        intent.putExtra(paramName,data)
+        startActivity(intent)
     }
-
-
 }

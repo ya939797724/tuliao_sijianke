@@ -3,7 +3,11 @@ package com.example.tuliao_pro
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.common.log.MLogUtil
+import com.example.common.log.impl.MLogFile
+import com.example.common.log.impl.MLogcat
 import com.example.common.sp.SPUtil
+import java.io.File
 
 class MainActivity : AppCompatActivity() {
     var username by SPUtil<MutableSet<String>>(this,"username", mutableSetOf())
@@ -11,5 +15,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+<<<<<<< HEAD
+=======
+        var log = MLogFile(File("/storage/emulated/0","log.txt"))
+        val logUtil = MLogUtil.Builder()
+            .addLog(log)
+            .addLog(MLogcat())
+            .isDebug(true)
+            .build()
+
+        logUtil.print("杨明乙")
+
+>>>>>>> 8a0a215e5c35591f4a4e651e2b8e442cf13725d6
     }
 }
