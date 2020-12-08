@@ -1,17 +1,14 @@
 package core.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import core.api.IFragment
 
-abstract class BaseFragment : Fragment(),IFragment {
+abstract class BaseFragment : Fragment() {
     protected var mView:View? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-<<<<<<< HEAD
         mView = inflater.inflate(bandLayout(),container,false)
         initView()
         return mView
@@ -23,17 +20,6 @@ abstract class BaseFragment : Fragment(),IFragment {
         initEvent()
     }
 
-=======
-        mView = inflater.inflate(layoutID(),null)
-        return mView
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        initData()
-        initView()
-    }
->>>>>>> 8a0a215e5c35591f4a4e651e2b8e442cf13725d6
 
     override fun onResume() {
         super.onResume()
@@ -50,14 +36,16 @@ abstract class BaseFragment : Fragment(),IFragment {
     abstract fun recycleData()
 
     abstract fun initbusiness()
-    override fun startActivity(activity: Class<*>?) {
-        val intent = Intent(context,activity)
-        startActivity(intent)
-    }
 
-    override fun startActivity(activity: Class<*>?, data: Bundle?, paramName: String?) {
-        val intent = Intent(context,activity)
-        intent.putExtra(paramName,data)
-        startActivity(intent)
+    abstract fun bandLayout(): Int
+
+    abstract fun initView()
+
+    abstract fun initData()
+
+    abstract fun initEvent()
+
+    fun findViewById(id:Int):View{
+        return mView!!.findViewById(id)
     }
 }
