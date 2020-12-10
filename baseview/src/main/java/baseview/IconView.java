@@ -21,4 +21,19 @@ public class IconView extends androidx.appcompat.widget.AppCompatImageView {
         super(context, attrs, defStyleAttr);
     }
 
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
+
+
+
+
 }
