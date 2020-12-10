@@ -1,3 +1,4 @@
+include ':umengPush'
 include ':baseview'
 include ':net'
 include ':mvp'
