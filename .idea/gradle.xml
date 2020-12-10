@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/mvp" />
             <option value="$PROJECT_DIR$/mvvmcore" />
             <option value="$PROJECT_DIR$/net" />
+            <option value="$PROJECT_DIR$/umengPush" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

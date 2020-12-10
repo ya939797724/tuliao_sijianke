@@ -1,22 +1,20 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-
+plugins {
+    id 'com.android.library'
+}
 def libs = rootProject.ext.dependencies
 def appInfo = rootProject.ext.android
-
 android {
     compileSdkVersion appInfo.compileSdkVersion
     buildToolsVersion appInfo.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.example.tuliao_pro"
         minSdkVersion appInfo.minSdkVersion
         targetSdkVersion appInfo.targetSdkVersion
         versionCode appInfo.versionCode
         versionName appInfo.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -29,25 +27,21 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation libs.corektx
-    implementation libs.appcompat
-    implementation libs.constraintlayout
-    implementation project(path: ':baseview')
-    implementation project(path: ':common')
-    implementation project(path: ':umengPush')
-    testImplementation libs.junit
-    androidTestImplementation libs.espresso
-    androidTestImplementation libs.extjunit
-    implementation libs.coroutines
-    implementation libs.material
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+    api 'com.umeng.umsdk:common:2.1.0'
+//PushSDK必须依赖utdid库，所以需要加入对应依赖
+    api 'com.umeng.umsdk:utdid:1.1.5.3'
+//PushSDK
+    api 'com.umeng.umsdk:push:6.0.1'
 }
