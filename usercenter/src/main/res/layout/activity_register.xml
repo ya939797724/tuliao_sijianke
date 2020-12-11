@@ -4,6 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
     tools:context=".ui.RegisterActivity">
+    <LinearLayout
+        android:background="#73E9ED"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2">
+        <com.example.usercenter.ui.MC_Register
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#fff"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:padding="10dp"
+            android:background="@drawable/uname_back"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:paddingLeft="10dp"
+            android:drawablePadding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="USERNAME"
+            android:drawableLeft="@drawable/msg"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <EditText
+            android:padding="10dp"
+            android:password="true"
+            android:background="@drawable/uname_back"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:paddingLeft="10dp"
+            android:drawablePadding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PASSWORD"
+            android:drawableLeft="@drawable/lock"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <EditText
+            android:padding="10dp"
+            android:password="true"
+            android:background="@drawable/uname_back"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:paddingLeft="10dp"
+            android:drawablePadding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="AGAIN PASSWORD"
+            android:drawableLeft="@drawable/lock"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <Button
+            android:layout_marginTop="20dp"
+            android:text="SIGN  IN"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/signin_back"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:background="#fff"
+        android:text="Do you need to ask for help?"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginBottom="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
