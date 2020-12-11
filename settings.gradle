@@ -1,3 +1,5 @@
+include ':XmppLibrary'
+include ':CommonLibrary'
 include ':umengPush'
 include ':baseview'
 include ':net'
