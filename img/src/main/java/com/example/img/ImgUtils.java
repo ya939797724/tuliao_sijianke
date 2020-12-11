@@ -10,9 +10,17 @@ import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 
 public class ImgUtils {
+    private static ImgUtils instance = new ImgUtils();
+
+    private ImgUtils(){}
+
+    public static ImgUtils getInstance() {
+        return instance;
+    }
+
     //TODO 设置String url
     //默认设置图片
-    public static void ImgDefault(Context context, String url, ImageView imagegview) {
+    public void ImgDefault(Context context, String url, ImageView imagegview) {
         Glide
                 .with(context)
                 .load(url)
@@ -21,7 +29,7 @@ public class ImgUtils {
     }
 
     //园形图片
-    public static void ImgCircle(Context context, String url, ImageView imagegview) {
+    public void ImgCircle(Context context, String url, ImageView imagegview) {
         Glide
                 .with(context)
                 .load(url)
@@ -30,7 +38,7 @@ public class ImgUtils {
     }
 
     //默认圆角20图片
-    public static void imgDefaultRound(Context context, String url, ImageView imagegview) {
+    public void imgDefaultRound(Context context, String url, ImageView imagegview) {
         Glide
                 .with(context)
                 .load(url)
@@ -39,7 +47,7 @@ public class ImgUtils {
     }
 
     //自定圆角度数图片
-    public static void imgRound(Context context, String url, ImageView imagegview, int limit) {
+    public void imgRound(Context context, String url, ImageView imagegview, int limit) {
         Glide
                 .with(context)
                 .load(url)
@@ -49,7 +57,7 @@ public class ImgUtils {
 
     //TODO 设置String uri
 
-    public static void ImgUriDefault(Context context, Uri uri, ImageView imagegview) {
+    public void ImgUriDefault(Context context, Uri uri, ImageView imagegview) {
         Glide
                 .with(context)
                 .load(uri)
@@ -58,7 +66,7 @@ public class ImgUtils {
     }
 
     //园形图片
-    public static void ImgUriCircle(Context context, Uri uri, ImageView imagegview) {
+    public void ImgUriCircle(Context context, Uri uri, ImageView imagegview) {
         Glide
                 .with(context)
                 .load(uri)
@@ -67,7 +75,7 @@ public class ImgUtils {
     }
 
     //默认圆角20图片
-    public static void imgUriDefaultRound(Context context, Uri uri, ImageView imagegview) {
+    public void imgUriDefaultRound(Context context, Uri uri, ImageView imagegview) {
         Glide
                 .with(context)
                 .load(uri)
@@ -76,7 +84,7 @@ public class ImgUtils {
     }
 
     //自定圆角度数图片
-    public static void imgUriRound(Context context, Uri uri, ImageView imagegview, int limit) {
+    public void imgUriRound(Context context, Uri uri, ImageView imagegview, int limit) {
         Glide
                 .with(context)
                 .load(uri)

@@ -10,6 +10,7 @@ android {
     buildToolsVersion appInfo.buildToolsVersion
 
     defaultConfig {
+        applicationId "com.example.tuliao_pro"
         minSdkVersion appInfo.minSdkVersion
         targetSdkVersion appInfo.targetSdkVersion
         versionCode appInfo.versionCode
@@ -39,10 +40,14 @@ dependencies {
     implementation libs.corektx
     implementation libs.appcompat
     implementation libs.constraintlayout
+    implementation project(path: ':baseview')
+    implementation project(path: ':common')
+    implementation project(path: ':umengPush')
     testImplementation libs.junit
     androidTestImplementation libs.espresso
     androidTestImplementation libs.extjunit
     implementation libs.coroutines
     implementation libs.material
+
 
 }

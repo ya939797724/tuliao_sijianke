@@ -1,5 +1,10 @@
 
 include ':mvp'
+
+include ':umengPush'
+include ':baseview'
+include ':net'
+include ':mvp'
 include ':mvvmcore'
 include ':img'
 include ':common'
