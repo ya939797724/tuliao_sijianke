@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+<<<<<<< HEAD
     <TextView
         android:layout_gravity="center"
         android:layout_width="wrap_content"
@@ -48,4 +49,6 @@
     </LinearLayout>
 
 
+=======
+>>>>>>> 2e9e6c8575a522520ebe3c0a72f8c5a3ac79c9a8
 </LinearLayout>

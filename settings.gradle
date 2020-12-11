@@ -1,11 +1,10 @@
-
-
+include ':XmppLibrary'
+include ':CommonLibrary'
 include ':mvp'
-
-
 include ':usercenter'
-
 include ':umengPush'
+include ':resource'
+include ':gdmap'
 include ':baseview'
 include ':net'
 include ':mvp'

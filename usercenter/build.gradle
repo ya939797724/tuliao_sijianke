@@ -27,7 +27,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2e9e6c8575a522520ebe3c0a72f8c5a3ac79c9a8
 }
 
 dependencies {
@@ -39,6 +42,7 @@ dependencies {
     implementation project(path: ':net')
     implementation project(path: ':mvvmcore')
     implementation project(path: ':common')
+//    implementation project(path: ':XmppLibrary')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

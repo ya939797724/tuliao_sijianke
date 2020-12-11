@@ -1,5 +1,6 @@
 package com.example.net
 
+import com.example.converter.CustomConverterFactory
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -8,12 +9,8 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-class RetrofitFactory private constructor() {
-    private var retrofit: Retrofit? = null
-
-    companion object {
-        val instance = RetrofitFactory()
-    }
+object RetrofitFactory  {
+    private lateinit var retrofit: Retrofit
 
     init {
         initRetrofit()
@@ -21,9 +18,9 @@ class RetrofitFactory private constructor() {
 
     private fun initRetrofit() {
         retrofit = Retrofit.Builder()
-            .baseUrl("http://39.100.125.37:8088/")
+            .baseUrl("http://api.zydeveloper.com:8086/")
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(CustomConverterFactory.create())
             .client(createOkHttpClient())
             .build()
     }

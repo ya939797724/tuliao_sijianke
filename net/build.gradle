@@ -37,11 +37,11 @@ dependencies {
     implementation libs.glide
 
     implementation libs.okhttp
-    implementation libs.rxjava2
+    api libs.rxjava2
     implementation libs.retrofit
     implementation libs.interceptor
-    implementation libs.rxjava
-    implementation libs.rxandroid
+    api libs.rxjava
+    api libs.rxandroid
     implementation libs.converter_gson
 
 }
