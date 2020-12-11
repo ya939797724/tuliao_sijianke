@@ -1,5 +1,7 @@
 include ':XmppLibrary'
 include ':CommonLibrary'
+include ':mvp'
+include ':usercenter'
 include ':umengPush'
 include ':baseview'
 include ':net'

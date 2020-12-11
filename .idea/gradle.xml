@@ -7,7 +7,6 @@
         <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="E:/专高3/gradle-6.1.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -21,6 +20,7 @@
             <option value="$PROJECT_DIR$/mvvmcore" />
             <option value="$PROJECT_DIR$/net" />
             <option value="$PROJECT_DIR$/umengPush" />
+            <option value="$PROJECT_DIR$/usercenter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
