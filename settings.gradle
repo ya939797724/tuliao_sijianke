@@ -1,3 +1,4 @@
+include ':usercenter'
 include ':baseview'
 include ':net'
 include ':mvp'
