@@ -10,20 +10,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import baseview.timer.TimerAdapter
 import baseview.timer.TimerEntity
+import baseview.timer_style.DividerItemDecoration
 import baseview.timer_style.TimeLineItemDecoration
 import com.example.common.sp.SPUtil
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    var username by SPUtil<MutableSet<String>>(this, "username", mutableSetOf())
-
-    private val timerEntities: MutableList<TimerEntity> = mutableListOf()
-    private var timerAdapter: TimerAdapter? = null
-    var flag: Boolean = false
-    var layoutManager:LinearLayoutManager?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+<<<<<<< HEAD
 
         timerview.setOnClickListener {
             val flag1 = timerview.flag
@@ -108,5 +104,7 @@ class MainActivity : AppCompatActivity() {
         //        mRecyclerView.addItemDecoration(new DividerItemDecoration(this)); //item分割线
         timer_rec.addItemDecoration(TimeLineItemDecoration(this)) //time时间轴
 
+=======
+>>>>>>> li
     }
 }

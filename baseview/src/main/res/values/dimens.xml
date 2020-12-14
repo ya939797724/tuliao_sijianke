@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="divider_height">0dp</dimen>
+    <dimen name="divider_margin">20dp</dimen>
     <dimen name="timeline_item_offset_left">20dp</dimen>
     <dimen name="timeline_item_offset_right">20dp</dimen>
     <dimen name="timeline_item_offset_top">20dp</dimen>

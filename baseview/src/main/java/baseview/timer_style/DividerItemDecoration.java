@@ -24,7 +24,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
         dividerPaint = new Paint();
         dividerHeight = context.getResources().getDimensionPixelSize(R.dimen.divider_height);
         dividerPaint.setColor(context.getResources().getColor(R.color.colorAccent));
-        mOffsetMagin = (int) context.getResources().getDimension(R.dimen.divider_height);
+        mOffsetMagin = (int) context.getResources().getDimension(R.dimen.divider_margin);
     }
 
     @Override
