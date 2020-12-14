@@ -1,5 +1,6 @@
 package com.example.net
 
+import com.example.converter.CustomConverterFactory
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -19,7 +20,7 @@ object RetrofitFactory  {
         retrofit = Retrofit.Builder()
             .baseUrl("http://api.zydeveloper.com:8086/")
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(CustomConverterFactory.create())
             .client(createOkHttpClient())
             .build()
     }

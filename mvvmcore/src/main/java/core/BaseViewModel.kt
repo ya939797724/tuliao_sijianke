@@ -7,19 +7,12 @@ import androidx.lifecycle.OnLifecycleEvent
 import core.api.IViewModel
 import java.lang.NullPointerException
 
-abstract class BaseViewModel<M : IModel> : IViewModel{
-    protected lateinit var mModel:M
-    protected lateinit var mOwner:LifecycleOwner
-
-    abstract fun createModel()
-
-    protected fun BaseViewModel(owner: LifecycleOwner){
-        if (owner == null){
-            throw NullPointerException("owner is not null·····")
-        }
-        mOwner = owner
-        mOwner.lifecycle.addObserver(this)
-        createModel()
+abstract class BaseViewModel<M : IModel> {
+    protected lateinit var mModel: M
+    init {
+        mModel = mModel
     }
+    abstract fun createModel():M
+
 
 }
