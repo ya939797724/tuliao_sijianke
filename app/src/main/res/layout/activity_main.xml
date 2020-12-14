@@ -27,8 +27,8 @@
         app:layout_constraintTop_toTopOf="parent" />
     <baseview.BaseLinearLayout
         android:id="@+id/baselinear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
 
     </baseview.BaseLinearLayout>
 </LinearLayout>

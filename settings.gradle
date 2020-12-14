@@ -1,3 +1,5 @@
+include ':resource'
+include ':gdmap'
 include ':baseview'
 include ':net'
 include ':mvp'

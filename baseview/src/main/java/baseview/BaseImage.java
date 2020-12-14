@@ -1,31 +1,25 @@
 package baseview;
 
-import android.annotation.SuppressLint;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.os.Build;
 import android.util.AttributeSet;
 
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 
 class BaseImage extends androidx.appcompat.widget.AppCompatImageView {
     private int defaultWidth = 200;
     private int defaultHeight = 100;
-    private Paint paint;
-    private int imgPath = 0;
-
+    private boolean isCheck = false;
+    private int animatorTime = 2000;
     public BaseImage(Context context) {
         super(context);
-        init();
     }
 
     public BaseImage(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        init();
     }
 
     public BaseImage(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
@@ -47,29 +41,48 @@ class BaseImage extends androidx.appcompat.widget.AppCompatImageView {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    @SuppressLint({"UseCompatLoadingForDrawables", "DrawAllocation"})
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-        if (imgPath!=0){
-            Bitmap bitmap = BitmapFactory.decodeResource(getContext().getResources(),imgPath);
-            canvas.drawBitmap(bitmap,null,paint);
+    public void startAnimator(){
+        ObjectAnimator scaleX = null;
+        ObjectAnimator scaleY = null;
+        if (!isCheck){
+            scaleX = ObjectAnimator.ofFloat(this, "scaleX", 1, 1.5f);
+            scaleY = ObjectAnimator.ofFloat(this, "scaleY", 1, 1.5f);
+            isCheck = true;
+        }else {
+            scaleX = ObjectAnimator.ofFloat(this, "scaleX", 1.5f, 1);
+            scaleY = ObjectAnimator.ofFloat(this, "scaleY", 1.5f, 1);
+            isCheck = false;
         }
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.play(scaleX).with(scaleY);
+        animatorSet.setDuration(animatorTime);
+        animatorSet.start();
 
     }
 
-    private void init() {
-        paint = new Paint();
+    public void startActionAnimation(float distance, final ImgCallBack imgCallBack){
+//        Log.d("zf",""+distance);
+        ObjectAnimator translationX = ObjectAnimator.ofFloat(this, "translationX", 0, distance);
+        translationX.setDuration(animatorTime);
+        translationX.start();
+        translationX.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                imgCallBack.ImgIsExceed();
+            }
+        });
     }
 
-    public void setImgPath(int path){
-        imgPath = path;
-        postInvalidate();
-    }
-
-    public void setImageWidth(int width){
-        defaultWidth = width;
-        requestLayout();
-    }
+//    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+//    @SuppressLint({"UseCompatLoadingForDrawables", "DrawAllocation"})
+//    @Override
+//    protected void onDraw(Canvas canvas) {
+//        super.onDraw(canvas);
+//        if (imgPath!=0){
+//            Bitmap bitmap = BitmapFactory.decodeResource(getContext().getResources(),imgPath);
+//            canvas.drawBitmap(bitmap,null,paint);
+//        }
+//
+//    }
 }

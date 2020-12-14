@@ -41,6 +41,7 @@ dependencies {
     implementation libs.constraintlayout
     implementation project(path: ':baseview')
     implementation project(path: ':common')
+    implementation project(path: ':resource')
     testImplementation libs.junit
     androidTestImplementation libs.espresso
     androidTestImplementation libs.extjunit
