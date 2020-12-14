@@ -15,16 +15,17 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/baseview" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/gdmap" />
             <option value="$PROJECT_DIR$/img" />
             <option value="$PROJECT_DIR$/mvp" />
             <option value="$PROJECT_DIR$/mvvmcore" />
             <option value="$PROJECT_DIR$/net" />
+            <option value="$PROJECT_DIR$/resource" />
             <option value="$PROJECT_DIR$/umengPush" />
             <option value="$PROJECT_DIR$/usercenter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
-        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>

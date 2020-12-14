@@ -1,0 +1,1 @@
+添加一个地图调用addMap(ViewGroup group,Bundle bundle)  第一个参数是要添加到哪个布局中  第二个参数是Bundle  最好是在oncreate中调用
