@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         timerview.setOnClickListener {
             val flag1 = timerview.flag
             if (flag1){
@@ -108,7 +107,6 @@ class MainActivity : AppCompatActivity() {
         timer_rec.setItemAnimator(DefaultItemAnimator())
         //        mRecyclerView.addItemDecoration(new DividerItemDecoration(this)); //item分割线
         timer_rec.addItemDecoration(TimeLineItemDecoration(this)) //time时间轴
-
 
     }
 }
