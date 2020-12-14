@@ -46,8 +46,16 @@
             android:layout_weight="1"
             android:id="@+id/btn5"/>
     </LinearLayout>
-<<<<<<< HEAD
-=======
-
->>>>>>> 29aaf58b3d193b2c0bdd24ba5ed62eebbac9ef03
+    <baseview.timer.TimerView
+        android:id="@+id/timerview"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/timerback"
+        android:layout_marginTop="300dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/timer_rec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"/>
+    </baseview.timer.TimerView>
 </LinearLayout>
