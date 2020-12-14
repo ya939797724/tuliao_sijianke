@@ -15,7 +15,6 @@ android {
 
     defaultConfig {
         if (isUserCenterDebug.toBoolean()) {
-
             applicationId "com.example.usercenter"
         }
         minSdkVersion appInfo.minSdkVersion
@@ -68,4 +67,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation ('com.alibaba:arouter-api:1.4.1')
     kapt 'com.alibaba:arouter-compiler:1.2.2' //ARouter依赖
+
 }

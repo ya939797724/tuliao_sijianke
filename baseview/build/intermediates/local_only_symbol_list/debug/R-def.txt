@@ -1,2 +1,29 @@
 R_DEF: Internal format may change without notice
 local
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
+dimen divider_height
+dimen divider_margin
+dimen timeline_item_node_radius
+dimen timeline_item_offset_bottom
+dimen timeline_item_offset_left
+dimen timeline_item_offset_right
+dimen timeline_item_offset_top
+drawable ic_baseline_directions_car_24
+drawable ic_baseline_filter_center_focus_24
+drawable ic_launcher_background
+drawable timerback
+id fruit_image
+id fruit_name
+id timer_img_flag
+id timer_tv_activity
+id timer_tv_loc
+id timer_tv_peoplenum
+id timer_tv_timehours
+id timer_tv_timeslot
+id timer_tv_timeyear
+layout case7_item_fruit
+layout layout_timershaft
+string app_name
+style AppTheme
