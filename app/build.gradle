@@ -43,6 +43,10 @@ dependencies {
     implementation project(path: ':baseview')
     implementation project(path: ':common')
     implementation project(path: ':umengPush')
+    implementation project(path: ':resource')
+    if (!isNeedGDMAPRun.toBoolean()){
+        implementation project(path: ':gdmap')
+    }
     testImplementation libs.junit
     androidTestImplementation libs.espresso
     androidTestImplementation libs.extjunit
