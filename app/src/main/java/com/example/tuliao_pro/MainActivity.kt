@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.annotation.RequiresApi
+import com.alibaba.android.arouter.launcher.ARouter
+import com.example.common.arouter.ActivitySwitch
 import com.example.common.log.MLogUtil
 import com.example.common.log.impl.MLogFile
 import com.example.common.log.impl.MLogcat
@@ -17,5 +19,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        ARouter.getInstance().build(ActivitySwitch.UserCenter.TEST_ACT).navigation()
     }
 }

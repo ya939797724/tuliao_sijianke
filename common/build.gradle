@@ -15,7 +15,11 @@ android {
         targetSdkVersion appInfo.targetSdkVersion
         versionCode appInfo.versionCode
         versionName appInfo.versionName
-
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -33,6 +37,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
@@ -46,5 +51,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation libs.glide
-    
+
+    implementation ('com.alibaba:arouter-api:1.4.1')
+    kapt 'com.alibaba:arouter-compiler:1.2.2' //ARouter依赖
 }
