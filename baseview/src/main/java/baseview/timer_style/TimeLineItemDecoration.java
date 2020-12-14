@@ -28,7 +28,7 @@ public class TimeLineItemDecoration extends RecyclerView.ItemDecoration {
     public TimeLineItemDecoration(Context context) {
         mPaint = new Paint();
         mPaint.setAntiAlias(true);  //抗锯齿
-        mPaint.setColor(Color.RED);
+        mPaint.setColor(Color.parseColor("#B9C5BA"));
         //outRect
         mOffsetLeft = context.getResources().getDimension(R.dimen.timeline_item_offset_left);
         mOffsetRight = context.getResources().getDimension(R.dimen.timeline_item_offset_right);

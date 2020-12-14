@@ -4,6 +4,7 @@ color colorAccent
 color colorPrimary
 color colorPrimaryDark
 dimen divider_height
+dimen divider_margin
 dimen timeline_item_node_radius
 dimen timeline_item_offset_bottom
 dimen timeline_item_offset_left

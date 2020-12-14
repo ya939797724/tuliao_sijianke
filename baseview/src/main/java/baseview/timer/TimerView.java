@@ -3,10 +3,12 @@ package baseview.timer;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,7 +25,7 @@ public class TimerView extends RelativeLayout {
     private TimerAdapter timerAdapter;
 
     ImageView expandimg;
-
+    TextView myactivity;
     private RecyclerView recyclerView;
 
     private Boolean flag=false;
@@ -87,12 +89,22 @@ public class TimerView extends RelativeLayout {
 
             }
         });
+
+        myactivity = new TextView(context);
         expandimg=new ImageView(context);
         expandimg.setImageResource(R.drawable.ic_baseline_filter_center_focus_24);
         expandimg.setLayoutParams(new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
         expandimg.setX(530);
         expandimg.setY(10);
+
+        myactivity.setLayoutParams(new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+        myactivity.setText("我的活动");
+        myactivity.setTextSize(25);
+        myactivity.setTextColor(Color.parseColor("#B9C5BA"));
+        myactivity.setX(190);
+        myactivity.setY(10);
         addView(expandimg);
+        addView(myactivity);
 
         expandimg.setOnClickListener(new OnClickListener() {
             @Override

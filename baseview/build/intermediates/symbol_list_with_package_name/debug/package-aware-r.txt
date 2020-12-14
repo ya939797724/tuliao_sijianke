@@ -1275,6 +1275,7 @@ dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
 dimen divider_height
+dimen divider_margin
 dimen dp_10
 dimen dp_4
 dimen dp_40

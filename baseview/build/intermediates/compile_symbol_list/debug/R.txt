@@ -1274,6 +1274,7 @@ int dimen design_textinput_caption_translate_y 0x0
 int dimen disabled_alpha_material_dark 0x0
 int dimen disabled_alpha_material_light 0x0
 int dimen divider_height 0x0
+int dimen divider_margin 0x0
 int dimen dp_10 0x0
 int dimen dp_4 0x0
 int dimen dp_40 0x0
