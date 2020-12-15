@@ -35,5 +35,7 @@ dependencies {
     implementation libs.coroutines
     implementation libs.material
     implementation libs.glide
+    api libs.recyclerview
+    api libs.BaseRecyclerViewAdapterHelper
 
 }

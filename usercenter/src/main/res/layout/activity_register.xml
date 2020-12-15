@@ -1,9 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.RegisterActivity">
+    tools:context=".ui.register.RegisterActivity">
 
-</LinearLayout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.usercenter.ui.register.RegisterViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fff"
+        >
+    <LinearLayout
+        android:background="#454545"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2">
+
+        <com.example.usercenter.ui.MC_Register
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#fff"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/uc_et_r_username"
+            android:padding="10dp"
+            android:background="@drawable/uname_back"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:paddingLeft="10dp"
+            android:drawablePadding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="USERNAME"
+            android:drawableLeft="@drawable/msg"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <EditText
+            android:id="@+id/uc_et_r_pwd_01"
+            android:padding="10dp"
+            android:password="true"
+            android:background="@drawable/uname_back"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:paddingLeft="10dp"
+            android:drawablePadding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PASSWORD"
+            android:drawableLeft="@drawable/lock"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <EditText
+            android:id="@+id/uc_et_r_pwd_02"
+            android:padding="10dp"
+            android:password="true"
+            android:background="@drawable/uname_back"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:paddingLeft="10dp"
+            android:drawablePadding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="AGAIN PASSWORD"
+            android:drawableLeft="@drawable/lock"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <Button
+            android:id="@+id/uc_bt_register"
+            android:layout_marginTop="20dp"
+            android:text="SIGN  IN"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/signin_back"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/uc_tv_help"
+        android:background="#fff"
+        android:text="Do you need to ask for help?"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginBottom="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

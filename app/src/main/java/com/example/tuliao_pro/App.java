@@ -3,9 +3,13 @@ package com.example.tuliao_pro;
 import android.app.Application;
 import android.util.Log;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.baweigame.xmpplibrary.XmppManager;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
+
+import java.util.concurrent.Executors;
 
 public class App extends Application {
 
@@ -36,5 +40,14 @@ public class App extends Application {
 //                Log.e("====","注册失败：-------->  " + "s:" + s + ",s1:" + s1);
 //            }
 //        });
+        Executors.newCachedThreadPool().execute(new Runnable() {
+            @Override
+            public void run() {
+                XmppManager.getInstance();
+            }
+        });
+        ARouter.openDebug();
+        ARouter.openLog();
+        ARouter.init(this);
     }
 }

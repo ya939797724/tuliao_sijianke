@@ -1,11 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.LoginActivity">
+    tools:context=".ui.login.LoginActivity">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.usercenter.ui.login.LoginViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="#E5E4CF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/back"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#fff"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+            <EditText
+                android:id="@+id/uc_et_username"
+                android:padding="10dp"
+                android:background="@drawable/uname_back"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:paddingLeft="10dp"
+                android:drawablePadding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="USERNAME"
+                android:drawableLeft="@drawable/msg"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                />
+            <EditText
+                android:id="@+id/uc_et_pwd"
+                android:padding="10dp"
+                android:password="true"
+                android:background="@drawable/uname_back"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:paddingLeft="10dp"
+                android:drawablePadding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="PASSWORD"
+                android:drawableLeft="@drawable/lock"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                />
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <CheckBox
+                    android:id="@+id/uc_is_save_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"/>
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="REMEMBER ME"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    />
 
-</LinearLayout>
+            </LinearLayout>
+            <Button
+                android:id="@+id/uc_bt_to_register"
+                android:layout_marginTop="10dp"
+                android:text="SIGN  IN"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/signin_back"
+                />
+            <Button
+                android:id="@+id/uc_bt_login"
+                android:layout_marginTop="20dp"
+                android:text="LOG  IN"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/login_back"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    </RelativeLayout>
+</layout>
