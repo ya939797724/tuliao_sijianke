@@ -5,15 +5,9 @@
 5
 6    <uses-sdk
 7        android:minSdkVersion="16"
-<<<<<<< HEAD
-7-->D:\tuliao_sijianke\mvvmcore\src\main\AndroidManifest.xml
-8        android:targetSdkVersion="30" />
-8-->D:\tuliao_sijianke\mvvmcore\src\main\AndroidManifest.xml
-=======
 7-->D:\AndroidProjects\1\tuliao_sijianke\mvvmcore\src\main\AndroidManifest.xml
 8        android:targetSdkVersion="30" />
 8-->D:\AndroidProjects\1\tuliao_sijianke\mvvmcore\src\main\AndroidManifest.xml
->>>>>>> dev
 9    /
 10
 11</manifest>

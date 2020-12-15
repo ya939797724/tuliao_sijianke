@@ -1,36 +1,5 @@
 -- Merging decision tree log ---
 manifest
-<<<<<<< HEAD
-ADDED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml:1:1-5:12
-	package
-		ADDED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml:2:5-30
-		INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-		INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-	android:versionCode
-		INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-		ADDED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml:1:1-5:12
-		INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-	xmlns:android
-		ADDED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml:1:11-69
-uses-sdk
-INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-	android:targetSdkVersion
-		INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-		ADDED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-		INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-	android:minSdkVersion
-		INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-		ADDED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-		INJECTED from D:\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
-=======
 ADDED from D:\AndroidProjects\1\tuliao_sijianke\mvp\src\main\AndroidManifest.xml:1:1-5:12
 INJECTED from D:\AndroidProjects\1\tuliao_sijianke\mvp\src\main\AndroidManifest.xml:1:1-5:12
 INJECTED from D:\AndroidProjects\1\tuliao_sijianke\mvp\src\main\AndroidManifest.xml:1:1-5:12
@@ -60,4 +29,3 @@ INJECTED from D:\AndroidProjects\1\tuliao_sijianke\mvp\src\main\AndroidManifest.
 		INJECTED from D:\AndroidProjects\1\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
 		ADDED from D:\AndroidProjects\1\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidProjects\1\tuliao_sijianke\mvp\src\main\AndroidManifest.xml
->>>>>>> dev

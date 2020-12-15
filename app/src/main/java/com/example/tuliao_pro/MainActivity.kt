@@ -19,13 +19,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-<<<<<<< HEAD
-=======
-        baselinear.addItem(getDrawable(R.mipmap.ic_launcher_round))
-        baselinear.addItem(getDrawable(R.mipmap.ic_launcher_round))
-        baselinear.addItem(getDrawable(R.mipmap.ic_launcher_round))
-        baselinear.addItem(getDrawable(R.mipmap.ic_launcher_round))
-        baselinear.addItem(getDrawable(R.mipmap.ic_launcher_round))
->>>>>>> dev
     }
 }
