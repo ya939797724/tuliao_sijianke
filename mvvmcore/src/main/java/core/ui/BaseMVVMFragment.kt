@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import core.BaseViewModel
 import core.api.IFragment
 
-abstract class BaseMVVMFragment<VM : BaseViewModel<*>,V : ViewDataBinding> : Fragment(),IFragment {
+abstract class BaseMVVMFragment<VM : BaseViewModel<*,*,*>,V : ViewDataBinding> : Fragment(),IFragment {
     protected lateinit var viewModel:VM
     protected lateinit var binding:V
 

@@ -1,5 +1,6 @@
 package com.example.net
 
+import android.content.Context
 import com.example.converter.CustomConverterFactory
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -11,7 +12,10 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitFactory  {
     private lateinit var retrofit: Retrofit
-
+    private  var token:String = ""
+    fun setToken(token:String){
+        this.token = token
+    }
     init {
         initRetrofit()
     }
@@ -39,7 +43,7 @@ object RetrofitFactory  {
         return Interceptor { chain ->
             val request = chain.request()
             val build = request.newBuilder()
-                .addHeader("Authorization", "")
+                .addHeader("token", ""+ token)
                 .build()
             chain.proceed(build)
         }

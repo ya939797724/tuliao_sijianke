@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent"
-
-    tools:context=".ui.LoginActivity">
+    tools:context=".ui.login.LoginActivity">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.usercenter.ui.login.LoginViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
     <LinearLayout
         android:orientation="vertical"
@@ -32,6 +37,7 @@
             android:layout_height="match_parent">
 
             <EditText
+                android:id="@+id/uc_et_username"
                 android:padding="10dp"
                 android:background="@drawable/uname_back"
                 android:textSize="20sp"
@@ -47,6 +53,7 @@
                 android:layout_marginLeft="20dp"
                 />
             <EditText
+                android:id="@+id/uc_et_pwd"
                 android:padding="10dp"
                 android:password="true"
                 android:background="@drawable/uname_back"
@@ -67,11 +74,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp">
                 <CheckBox
+                    android:id="@+id/uc_is_save_pwd"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"/>
                 <TextView
-
                     android:layout_marginLeft="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -84,7 +91,7 @@
 
             </LinearLayout>
             <Button
-                android:id="@+id/logintoRig"
+                android:id="@+id/uc_bt_to_register"
                 android:layout_marginTop="10dp"
                 android:text="SIGN  IN"
                 android:gravity="center"
@@ -97,6 +104,7 @@
                 android:background="@drawable/signin_back"
                 />
             <Button
+                android:id="@+id/uc_bt_login"
                 android:layout_marginTop="20dp"
                 android:text="LOG  IN"
                 android:gravity="center"
@@ -111,4 +119,5 @@
         </LinearLayout>
     </LinearLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
+</layout>
