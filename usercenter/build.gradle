@@ -27,10 +27,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 2e9e6c8575a522520ebe3c0a72f8c5a3ac79c9a8
+
+
+
 }
 
 dependencies {
