@@ -50,6 +50,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dataBinding{
+        enabled = true
+    }
 }
 
 dependencies {
@@ -61,7 +64,6 @@ dependencies {
     implementation project(path: ':net')
     implementation project(path: ':mvvmcore')
     implementation project(path: ':common')
-//    implementation project(path: ':XmppLibrary')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
