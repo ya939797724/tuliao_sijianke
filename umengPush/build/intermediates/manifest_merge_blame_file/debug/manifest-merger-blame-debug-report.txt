@@ -5,14 +5,8 @@
 5
 6    <uses-sdk
 7        android:minSdkVersion="16"
-<<<<<<< HEAD
 7-->D:\tuliao_sijianke\umengPush\src\main\AndroidManifest.xml
 8        android:targetSdkVersion="30" />
 8-->D:\tuliao_sijianke\umengPush\src\main\AndroidManifest.xml
-=======
-7-->D:\AndroidText\Tuliao_pro\umengPush\src\main\AndroidManifest.xml
-8        android:targetSdkVersion="30" />
-8-->D:\AndroidText\Tuliao_pro\umengPush\src\main\AndroidManifest.xml
->>>>>>> f9f76d7e34cbdd9639c8b3bc24f8fa7abdb683c6
 9
 10</manifest>

@@ -1,4 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="PLATFORM" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="E:/专高3/gradle-6.1.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/CommonLibrary" />
+            <option value="$PROJECT_DIR$/XmppLibrary" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/baseview" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/gdmap" />
+            <option value="$PROJECT_DIR$/home" />
+            <option value="$PROJECT_DIR$/homepage" />
+            <option value="$PROJECT_DIR$/mvp" />
+            <option value="$PROJECT_DIR$/mvvmcore" />
+            <option value="$PROJECT_DIR$/net" />
+            <option value="$PROJECT_DIR$/resource" />
+            <option value="$PROJECT_DIR$/umengPush" />
+            <option value="$PROJECT_DIR$/usercenter" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
 </project>

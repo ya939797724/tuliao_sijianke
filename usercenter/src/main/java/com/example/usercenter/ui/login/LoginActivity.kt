@@ -58,11 +58,11 @@ class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
         }
         //登录成功回调
         viewModel.netSuccess.observe(this, Observer {
-<<<<<<< HEAD
+
             val isUserOnLine = XmppManager.getInstance().xmppUserManager.IsUserOnLine("12345678911")
             Toast.makeText(this, "登录成功"+isUserOnLine, Toast.LENGTH_SHORT).show()
             startActivity(Intent(this,AddUserActivity::class.java))
-=======
+
             userToken = it.data.token//sp添加token
             RetrofitFactory.setToken(userToken)//网络请求添加token
             Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show()
@@ -71,7 +71,7 @@ class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
             }else{
                 pwdSp = ""
             }
->>>>>>> f9f76d7e34cbdd9639c8b3bc24f8fa7abdb683c6
+
         })
         viewModel.netFailure.observe(this, Observer {
             Toast.makeText(this, "登录失败", Toast.LENGTH_SHORT).show()
