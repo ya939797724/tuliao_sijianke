@@ -45,7 +45,7 @@ dependencies {
     implementation project(path: ':resource')
     implementation libs.appcompat
     implementation libs.constraintlayout
-    implementation files('libs\\AMap3DMap_7.2.1_AMapNavi_7.2.0_AMapSearch_7.1.0_AMapLocation_4.9.0_20200302.jar')
+    api files('libs\\AMap3DMap_7.2.1_AMapNavi_7.2.0_AMapSearch_7.1.0_AMapLocation_4.9.0_20200302.jar')
     testImplementation libs.junit
     androidTestImplementation libs.espresso
     androidTestImplementation libs.extjunit

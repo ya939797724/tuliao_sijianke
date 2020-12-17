@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\AndroidProjects\1\tuliao_sijianke\baseview\src\main\assets"/><source path="D:\AndroidProjects\1\tuliao_sijianke\baseview\build\intermediates\shader_assets\debug\out"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\AndroidProjects\1\tuliao_sijianke\baseview\src\debug\assets"/></dataSet></merger>
 =======
 <merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\study\android_studio\project\tuliaoProject\tuliao_sijianke\baseview\src\main\assets"/><source path="D:\study\android_studio\project\tuliaoProject\tuliao_sijianke\baseview\build\intermediates\shader_assets\debug\out"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\study\android_studio\project\tuliaoProject\tuliao_sijianke\baseview\src\debug\assets"/></dataSet></merger>
@@ -8,3 +9,6 @@
 =======
 <merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\AndroidProjects\1\tuliao_sijianke\baseview\src\main\assets"/><source path="D:\AndroidProjects\1\tuliao_sijianke\baseview\build\intermediates\shader_assets\debug\out"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\AndroidProjects\1\tuliao_sijianke\baseview\src\debug\assets"/></dataSet></merger>
 >>>>>>> dev
+=======
+<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\AndroidText\Tuliao_pro\baseview\src\main\assets"/><source path="D:\AndroidText\Tuliao_pro\baseview\build\intermediates\shader_assets\debug\out"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\AndroidText\Tuliao_pro\baseview\src\debug\assets"/></dataSet></merger>
+>>>>>>> f9f76d7e34cbdd9639c8b3bc24f8fa7abdb683c6
