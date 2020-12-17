@@ -1,5 +1,6 @@
 package com.example.usercenter.ui.login
 
+import android.content.Intent
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -13,6 +14,7 @@ import com.example.usercenter.BR
 import com.example.usercenter.R
 import com.example.usercenter.databinding.ActivityLoginBinding
 import com.example.usercenter.ui.register.RegisterActivity
+import com.example.zxcode.AddUserActivity
 import core.ui.BaseMVVMActivity
 
 @Route(path = ActivitySwitch.UserCenter.LOGIN_ACT)
@@ -60,6 +62,11 @@ class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
         }
         //登录成功回调
         viewModel.netSuccess.observe(this, Observer {
+
+            val isUserOnLine = XmppManager.getInstance().xmppUserManager.IsUserOnLine("12345678911")
+            Toast.makeText(this, "登录成功"+isUserOnLine, Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,AddUserActivity::class.java))
+
             userToken = it.data.token//sp添加token
             RetrofitFactory.setToken(userToken)//网络请求添加token
             Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show()
@@ -68,7 +75,6 @@ class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
             }else{
                 pwdSp = ""
             }
-            ARouter.getInstance().build(ActivitySwitch.Home.HOME_ACT).navigation()
         })
         viewModel.netFailure.observe(this, Observer {
             Toast.makeText(this, "登录失败", Toast.LENGTH_SHORT).show()

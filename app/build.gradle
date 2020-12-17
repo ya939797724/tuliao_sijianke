@@ -55,6 +55,7 @@ dependencies {
     implementation project(path: ':umengPush')
     implementation project(path: ':resource')
     implementation project(path: ':net')
+    implementation files('libs\\pinyin4j-2.5.0.jar')
     if(!isUserCenterDebug.toBoolean()){
         implementation project(path: ':usercenter')
     }
