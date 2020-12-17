@@ -3,6 +3,7 @@
     package="com.example.usercenter">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +21,7 @@
         </activity>
         <activity android:name=".ui.adduser.InformationActivity"></activity>
         <activity android:name=".ui.adduser.CreateFlockActivity" />
-
+        <activity android:name=".ui.adduser.SaoActivity"></activity>
         <activity android:name="com.example.zxcode.AddUserActivity"/>
         <activity android:name="com.example.zxcode.ContoctsActivity"/>
         <activity android:name="com.example.zxcode.ZxActivity"/>
