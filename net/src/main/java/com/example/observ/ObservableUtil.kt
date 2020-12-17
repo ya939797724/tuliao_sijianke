@@ -23,3 +23,21 @@ fun <T> Flowable<T>.customObserver(success:(T)->Unit,error:(error:Throwable)->Un
                 }
         })
 }
+fun <T> Flowable<T>.customXMppObserver(before:()->Boolean,success:(T)->Unit,error:(error:Throwable)->Unit) {
+        if(before()){
+                this.subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(object :CustomObserver<T>(){
+                                override fun onNext(t: T) {
+                                        super.onNext(t)
+                                        success(t)
+                                }
+                                override fun onError(t: Throwable) {
+                                        super.onError(t)
+                                        error(t)
+                                }
+                        })
+        }else{
+                error(Throwable("失败"))
+        }
+}
