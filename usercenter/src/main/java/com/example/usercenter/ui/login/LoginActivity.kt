@@ -3,7 +3,10 @@ package com.example.usercenter.ui.login
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.baweigame.xmpplibrary.XmppManager
+import com.example.common.arouter.ActivitySwitch
 import com.example.common.sp.SPUtil
 import com.example.net.RetrofitFactory
 import com.example.usercenter.BR
@@ -12,7 +15,7 @@ import com.example.usercenter.databinding.ActivityLoginBinding
 import com.example.usercenter.ui.register.RegisterActivity
 import core.ui.BaseMVVMActivity
 
-
+@Route(path = ActivitySwitch.UserCenter.LOGIN_ACT)
 class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
     //sp存储
     private var userToken by SPUtil<String>(this,"userToken","")
@@ -28,6 +31,7 @@ class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
     }
 
     override fun initData() {
+        ARouter.getInstance().inject(this)
         //预加载上次输入的用户名密码
         binding.ucEtUsername.setText(usernameSp)
         binding.ucEtPwd.setText(pwdSp)
@@ -64,6 +68,7 @@ class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
             }else{
                 pwdSp = ""
             }
+            ARouter.getInstance().build(ActivitySwitch.Home.HOME_ACT).navigation()
         })
         viewModel.netFailure.observe(this, Observer {
             Toast.makeText(this, "登录失败", Toast.LENGTH_SHORT).show()

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <group android:checkableBehavior="single"
+        >
+        <item android:id="@+id/h_menu_01" android:title="我的相册" android:icon="@drawable/car"/>
+        <item android:id="@+id/h_menu_02" android:title="我的轨迹" android:icon="@drawable/car"/>
+        <item android:id="@+id/h_menu_03" android:title="分享" android:icon="@drawable/car"/>
+        <item android:id="@+id/h_menu_04" android:title="设置" android:icon="@drawable/car"/>
+    </group>
+</menu>
