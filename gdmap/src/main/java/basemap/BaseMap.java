@@ -11,7 +11,7 @@ public class BaseMap extends MapView {
 
     public BaseMap(Context context) {
         super(context);
-    }
+}
 
     public BaseMap(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);

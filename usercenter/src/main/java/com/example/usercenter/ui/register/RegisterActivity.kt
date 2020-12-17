@@ -20,12 +20,13 @@ class RegisterActivity : BaseMVVMActivity<RegisterViewModel,ActivityRegisterBind
     }
 
     override fun initView() {
+        //点击注册按钮，获取用户输入账号
         binding.ucBtRegister.setOnClickListener {
             val username = binding.ucEtRUsername.text.toString()
             val pwd = binding.ucEtRPwd01.text.toString()
             viewModel.register(username, pwd)
         }
-
+        //注册成功回调
         viewModel.netSuccess.observe(this, Observer {
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
             finish()
