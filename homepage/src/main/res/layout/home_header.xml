@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="80dp">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/home_head"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_round"/>
+    <LinearLayout
+        android:layout_toRightOf="@id/home_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/home_distance"
+            android:layout_weight="0.5"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="你的距离是……"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:background="@drawable/location_background"
+            android:drawableLeft="@drawable/location"
+            android:layout_marginLeft="10dp"/>
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_toRightOf="@id/home_distance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="搜索..."
+            android:paddingLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/search_background"
+            android:drawableLeft="@drawable/search"/>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/scan"/>
+    </LinearLayout>
+</LinearLayout>
