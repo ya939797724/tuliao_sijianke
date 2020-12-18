@@ -18,7 +18,12 @@
         <activity android:name=".ui.login.LoginActivity">
 
         </activity>
+        <activity android:name=".ui.adduser.InformationActivity"></activity>
+        <activity android:name=".ui.adduser.CreateFlockActivity" />
 
+        <activity android:name="com.example.zxcode.AddUserActivity"/>
+        <activity android:name="com.example.zxcode.ContoctsActivity"/>
+        <activity android:name="com.example.zxcode.ZxActivity"/>
         <activity android:name=".ui.TestActivity">
 
             <intent-filter>

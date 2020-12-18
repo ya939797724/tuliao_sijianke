@@ -1,18 +1,23 @@
 package com.example.usercenter.ui.login
 
+import android.content.Intent
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.baweigame.xmpplibrary.XmppManager
+import com.example.common.arouter.ActivitySwitch
 import com.example.common.sp.SPUtil
 import com.example.net.RetrofitFactory
 import com.example.usercenter.BR
 import com.example.usercenter.R
 import com.example.usercenter.databinding.ActivityLoginBinding
 import com.example.usercenter.ui.register.RegisterActivity
+import com.example.zxcode.AddUserActivity
 import core.ui.BaseMVVMActivity
 
-
+@Route(path = ActivitySwitch.UserCenter.LOGIN_ACT)
 class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
     //sp存储
     private var userToken by SPUtil<String>(this,"userToken","")
@@ -28,6 +33,7 @@ class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
     }
 
     override fun initData() {
+        ARouter.getInstance().inject(this)
         //预加载上次输入的用户名密码
         binding.ucEtUsername.setText(usernameSp)
         binding.ucEtPwd.setText(pwdSp)
@@ -56,6 +62,11 @@ class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
         }
         //登录成功回调
         viewModel.netSuccess.observe(this, Observer {
+
+            val isUserOnLine = XmppManager.getInstance().xmppUserManager.IsUserOnLine("12345678911")
+            Toast.makeText(this, "登录成功"+isUserOnLine, Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,AddUserActivity::class.java))
+
             userToken = it.data.token//sp添加token
             RetrofitFactory.setToken(userToken)//网络请求添加token
             Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show()
