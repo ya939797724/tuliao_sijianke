@@ -5,18 +5,21 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
+import com.example.common.arouter.ActivitySwitch
 import com.example.usercenter.BR
 import com.example.usercenter.R
 import com.example.usercenter.databinding.ActivityRegisterBinding
 import core.ui.BaseMVVMActivity
-
+@Route(path = ActivitySwitch.UserCenter.REGISTER_ACT)
 class RegisterActivity : BaseMVVMActivity<RegisterViewModel,ActivityRegisterBinding>() {
     override fun layoutID(): Int {
        return R.layout.activity_register
     }
 
     override fun initData() {
-
+        ARouter.getInstance().inject(this)
     }
 
     override fun initView() {
