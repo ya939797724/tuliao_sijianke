@@ -1,4 +1,4 @@
-package sort;
+package untils;
 
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
@@ -51,6 +51,7 @@ public class LinkManUntils {
         return list;
     }
 
+    //获取手机联系人并判断是否开启联系人权限
     @SuppressLint("UseCheckPermission")
     public List<LinkMan> getLinkMans(Context context){
         //判断联系人权限是否开启
@@ -83,4 +84,18 @@ public class LinkManUntils {
 
         return null;
     }
+
+    //获取26个英文字母
+    List<String> letterList = new ArrayList<>();
+    public List<String> getEnglishLetter(){
+        if (letterList.size()!=26){
+            char a = 'A';
+            for (int i = 1; i <=26; i++) {
+                letterList.add(String.valueOf(a++));
+            }
+        }
+        return letterList;
+    }
+
+
 }
