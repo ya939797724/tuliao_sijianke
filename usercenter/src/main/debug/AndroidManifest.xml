@@ -19,11 +19,17 @@
         <activity android:name=".ui.login.LoginActivity">
 
         </activity>
+
+        <activity android:name=".ui.adduser.PhoneContactsActivity"></activity>
+        <activity android:name=".ui.adduser.ContactsActivity" />
+        <activity android:name=".ui.adduser.GroupChatActivity" />
+        <activity android:name=".ui.adduser.PersonChatActivity" />
+        <activity android:name=".ui.adduser.ChatSettingActivity" />
+
         <activity android:name=".ui.adduser.InformationActivity"></activity>
         <activity android:name=".ui.adduser.CreateFlockActivity" />
         <activity android:name=".ui.adduser.SaoActivity"></activity>
         <activity android:name="com.example.zxcode.AddUserActivity"/>
-        <activity android:name="com.example.zxcode.ContoctsActivity"/>
         <activity android:name="com.example.zxcode.ZxActivity"/>
         <activity android:name=".ui.TestActivity">
 
