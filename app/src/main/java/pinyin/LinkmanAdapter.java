@@ -18,7 +18,7 @@ public class LinkmanAdapter extends BaseMultiItemQuickAdapter<LinkMan, BaseViewH
      */
     public LinkmanAdapter(List<LinkMan> data) {
         super(data);
-        addItemType(LinkMan.ISLINKMAN, R.layout.linkman_layout);
+        addItemType(LinkMan.ISLINKMAN, R.layout.linkman_item_layout);
         addItemType(LinkMan.ISLETTER,R.layout.letter_item_layout);
     }
 
