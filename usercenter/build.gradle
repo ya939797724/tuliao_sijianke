@@ -26,6 +26,7 @@ android {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     sourceSets{
@@ -47,12 +48,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-
-
-
-
-
+    
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -76,5 +72,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation ('com.alibaba:arouter-api:1.4.1')
     kapt 'com.alibaba:arouter-compiler:1.2.2' //ARouter依赖
-
+    implementation libs.FlycoTabLayout_Lib
+    implementation libs.recyclerview
+    implementation libs.BaseRecyclerViewAdapterHelper
+    api 'cn.yipianfengye.android:zxing-library:2.2'
 }

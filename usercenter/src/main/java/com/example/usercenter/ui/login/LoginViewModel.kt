@@ -24,9 +24,5 @@ class LoginViewModel : BaseViewModel<BaseEntity<LoginBean>,String,UserModel>() {
             },{
                 _netFailure.apply { value=it.message }
             })
-
     }
-
-
-
 }

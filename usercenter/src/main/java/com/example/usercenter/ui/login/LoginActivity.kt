@@ -1,5 +1,6 @@
 package com.example.usercenter.ui.login
 
+import android.content.Intent
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -13,6 +14,7 @@ import com.example.usercenter.BR
 import com.example.usercenter.R
 import com.example.usercenter.databinding.ActivityLoginBinding
 import com.example.usercenter.ui.register.RegisterActivity
+import com.example.zxcode.AddUserActivity
 import core.ui.BaseMVVMActivity
 
 @Route(path = ActivitySwitch.UserCenter.LOGIN_ACT)
@@ -22,7 +24,7 @@ class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
     private var usernameSp by SPUtil<String>(this,"username","")
     private var pwdSp by SPUtil<String>(this,"pwd","")
     //判断是否需要存储密码
-    private var isSavePwd:Boolean = false
+    private var isSavePwd by SPUtil<Boolean>(this,"isSavePwd",false)
     //成员变量用户名密码
     private var username = ""
     private var pwd = ""

@@ -1,5 +1,7 @@
 package com.example.usercenter.model;
 
+import android.util.Log;
+
 import com.example.net.BaseEntity;
 import com.example.net.RetrofitFactory;
 import com.example.usercenter.model.api.UserCenterApi;
@@ -22,4 +24,5 @@ public class UserModel implements IModel {
     public Flowable<BaseEntity<Boolean>> verificationCode(String phoneNumber){
         return RetrofitFactory.INSTANCE.create(UserCenterApi.class).verificationCode(phoneNumber);
     }
+
 }

@@ -8,6 +8,7 @@ import com.baweigame.xmpplibrary.XmppManager;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
+import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 
 import java.util.concurrent.Executors;
 
@@ -49,5 +50,7 @@ public class App extends Application {
         ARouter.openDebug();
         ARouter.openLog();
         ARouter.init(this);
+
+        ZXingLibrary.initDisplayOpinion(this);
     }
 }
