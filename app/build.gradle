@@ -73,4 +73,5 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     implementation ('com.alibaba:arouter-api:1.4.1')
     kapt 'com.alibaba:arouter-compiler:1.2.2' //ARouter依赖
+    api 'cn.yipianfengye.android:zxing-library:2.2'
 }

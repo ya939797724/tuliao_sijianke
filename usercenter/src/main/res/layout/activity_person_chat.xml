@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.adduser.PersonChatActivity">
+    tools:context="com.example.usercenter.ui.adduser.PersonChatActivity">
 
     <LinearLayout
         android:id="@+id/chat_ll"
@@ -24,31 +24,34 @@
                 android:id="@+id/personchat_return"
                 android:layout_width="50dp"
                 android:layout_height="60dp"
-                android:src="@drawable/ic_baseline_arrow_left_24" />
+                android:src="@drawable/ic_baseline_chevron_left_24" />
 
             <TextView
                 android:id="@+id/chatname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="消息"
+                android:layout_centerVertical="true"
+                android:text="姓名"
                 android:textColor="#ffffff"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/personchat_img_phone"
-                android:layout_width="50dp"
+                android:layout_width="30dp"
                 android:layout_height="60dp"
                 android:layout_toLeftOf="@+id/personchat_img_setting"
                 android:src="@drawable/ic_baseline_phone_enabled_24" />
 
             <ImageView
                 android:id="@+id/personchat_img_setting"
-                android:layout_width="50dp"
+                android:layout_width="30dp"
                 android:layout_height="60dp"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/ic_baseline_settings_24" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_baseline_format_list_bulleted_24" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -56,76 +59,57 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/chat_ll"
-
-        />
+        android:layout_marginTop="-3dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_above="@+id/chat_ll_tu"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_height="60dp"
+        android:layout_above="@+id/personchat_ll"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
 
         <EditText
-            android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:id="@+id/personchat_et_msg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_marginRight="10dp"
-            android:layout_weight="10"
+            android:layout_weight="1"
             android:background="@drawable/edbackground_write"
             app:layout_constraintBottom_toBottomOf="parent" />
 
         <Button
-            android:layout_width="0dp"
+            android:id="@+id/personchat_bt_sendmsg"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:background="#339999"
+            android:background="@drawable/send_back"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
             android:text="发送"
-            android:textSize="25sp" />
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/chat_ll_tu"
+        android:id="@+id/personchat_ll"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/yuyin" />
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/personchat_comm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true" />
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/picture" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/camera" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/myloc" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/biaoqing" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/kuai" />
+        <FrameLayout
+            android:id="@+id/personchat_fl"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/personchat_comm" />
     </LinearLayout>
+
 </RelativeLayout>

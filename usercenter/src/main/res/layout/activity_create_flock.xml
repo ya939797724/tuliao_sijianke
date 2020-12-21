@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.adduser.CreateFlockActivity">
+    tools:context="com.example.usercenter.ui.adduser.CreateFlockActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,26 +22,29 @@
                 android:id="@+id/createflock_return"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_baseline_arrow_left_24" />
+                android:src="@drawable/ic_baseline_chevron_left_24" />
 
             <TextView
+                android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="创建群"
                 android:textColor="#ffffff"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:gravity="center_vertical"
+                android:layout_marginRight="10dp"
                 android:id="@+id/createflock_sava"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
                 android:layout_centerHorizontal="true"
                 android:text="保存"
                 android:textColor="#ffffff"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </RelativeLayout>
 
@@ -50,55 +53,60 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp">
+        android:orientation="vertical">
 
         <EditText
+            android:drawablePadding="10dp"
             android:id="@+id/createflock_ed_makefriends"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/edbackground"
             android:drawableLeft="@drawable/ic_baseline_group_24"
             android:hint="交友"
             android:paddingLeft="10dp"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/createflock_ed_flockname"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/edbackground"
-            android:drawableLeft="@drawable/ic_baseline_group_24"
+
             android:hint="输入群名称"
             android:paddingLeft="10dp"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/createflock_ed_flockbrief"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/edbackground"
-            android:drawableLeft="@drawable/ic_baseline_group_24"
+
+
             android:hint="输入群简介"
             android:paddingLeft="10dp"
-            android:textSize="30sp" />
-
+            android:textSize="20sp" />
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#888"/>
         <TextView
             android:id="@+id/createflock_tv_addmember"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/edbackground"
+            android:drawablePadding="10dp"
             android:drawableLeft="@drawable/ic_baseline_group_add_24"
             android:gravity="left|center"
             android:paddingLeft="10dp"
             android:text="创建群"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#888"/>
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/createflock_rec"

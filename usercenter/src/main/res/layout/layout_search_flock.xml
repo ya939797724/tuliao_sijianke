@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <EditText
+        android:drawablePadding="10dp"
         android:id="@+id/searchflock_ed"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -14,33 +15,50 @@
         android:drawableLeft="@drawable/ic_baseline_search_24"
         android:hint="搜索群账号/群名称"
         android:paddingLeft="20dp"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"/>
     <TextView
+        android:drawablePadding="10dp"
         android:id="@+id/searchflock_tv_addflock"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="@drawable/searchpeople"
+        android:background="#fff"
         android:drawableLeft="@drawable/ic_baseline_add_box_24"
         android:gravity="center|left"
         android:paddingLeft="30dp"
         android:text="创建群"
         android:textColor="#969696"
-        android:textSize="30dp" />
-
+        android:textSize="20dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"/>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"/>
     <TextView
+        android:drawablePadding="10dp"
         android:id="@+id/searchflock_tv_zxing"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/searchpeople"
+        android:background="#fff"
         android:drawableLeft="@drawable/ic_baseline_crop_free_24"
         android:gravity="center|left"
         android:paddingLeft="30dp"
         android:text="扫码进群"
         android:textColor="#969696"
-        android:textSize="30dp" />
-
+        android:textSize="20dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"/>
     <com.flyco.tablayout.SlidingTabLayout
         android:id="@+id/searchflock_tab"
         android:layout_width="match_parent"

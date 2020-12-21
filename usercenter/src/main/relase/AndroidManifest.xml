@@ -7,7 +7,10 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 364687912bf211e680c892c06582d69f036fd0b1
         <activity android:name=".ui.adduser.PhoneContactsActivity"></activity>
         <activity android:name=".ui.adduser.ContactsActivity" />
         <activity android:name=".ui.adduser.GroupChatActivity" />
@@ -15,13 +18,19 @@
         <activity android:name=".ui.adduser.ChatSettingActivity" />
         <activity android:name=".ui.adduser.SaoActivity" />
         <activity android:name=".ui.adduser.InformationActivity" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 364687912bf211e680c892c06582d69f036fd0b1
         <activity android:name=".ui.TestActivity">
         </activity>
 
         <activity android:name=".ui.adduser.InformationActivity"
             tools:ignore="DuplicateActivity" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 364687912bf211e680c892c06582d69f036fd0b1
         <activity android:name=".ui.adduser.CreateFlockActivity" />
         <activity android:name=".ui.TestActivity"
             tools:ignore="DuplicateActivity" />
