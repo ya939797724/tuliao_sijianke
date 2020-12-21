@@ -5,48 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.zxcode.AddUserActivity">
+    tools:context=".ui.adduser.ContactsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="#339999"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:padding="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp">
 
             <ImageView
-                android:id="@+id/adduser_return"
+                android:id="@+id/contacts_return"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/ic_baseline_chevron_left_24" />
 
             <TextView
+                android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text="添加"
+                android:text="联系人"
                 android:textColor="#ffffff"
-                android:textSize="20sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_baseline_person_add_24" />
         </RelativeLayout>
-
-        <com.flyco.tablayout.SlidingTabLayout
-            android:id="@+id/adduser_tv_slid"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:tl_tab_space_equal="true"
-            app:tl_textSelectColor="#ffffff"
-            app:tl_textUnselectColor="#000000"
-            app:tl_indicator_color="#FFC107"
-            />
     </LinearLayout>
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/useradd_vp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contacts_rec"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/contacts_comm"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:tl_textSelectColor="#ffffff"
+        app:tl_textUnselectColor="#000000"
+        app:tl_tab_space_equal="true"/>
+    <FrameLayout
+        android:id="@+id/contacts_fm"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

@@ -3,6 +3,8 @@ package com.example.zxcode
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentPagerAdapter
+import androidx.viewpager.widget.ViewPager
 import com.example.usercenter.R
 
 import com.example.zxcode.fragments.Search_Flock_Fragment
@@ -20,6 +22,7 @@ class AddUserActivity : AppCompatActivity() {
         /**
          * 添加群或者联系人的总viewpager
          */
+
         addUserFragments.add(Search_People_Fragment())
         addUserFragments.add(Search_Flock_Fragment())
         adduser_tv_slid.setViewPager(useradd_vp,arrayAddUser,this,addUserFragments)

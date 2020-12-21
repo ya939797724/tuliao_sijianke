@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.usercenter">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application>
-        <activity android:name=".ui.adduser.SaoActivity"></activity>
+        <activity android:name=".ui.adduser.PhoneContactsActivity"></activity>
+        <activity android:name=".ui.adduser.ContactsActivity" />
+        <activity android:name=".ui.adduser.GroupChatActivity" />
+        <activity android:name=".ui.adduser.PersonChatActivity" />
+        <activity android:name=".ui.adduser.ChatSettingActivity" />
+        <activity android:name=".ui.adduser.SaoActivity" />
         <activity android:name=".ui.adduser.InformationActivity" />
+        <activity android:name=".ui.TestActivity">
+        </activity>
+        <activity android:name=".ui.adduser.InformationActivity"></activity>
+        <activity android:name=".ui.adduser.SaoActivity"></activity>
+        <activity android:name=".ui.adduser.InformationActivity"
+            tools:ignore="DuplicateActivity" />
         <activity android:name=".ui.adduser.CreateFlockActivity" />
-        <activity android:name=".ui.TestActivity" />
+        <activity android:name=".ui.TestActivity"
+            tools:ignore="DuplicateActivity" />
         <activity android:name="com.example.zxcode.AddUserActivity" />
-        <activity android:name="com.example.zxcode.ContoctsActivity" />
         <activity android:name="com.example.zxcode.ZxActivity" />
         <activity android:name=".ui.register.RegisterActivity" />
         <activity android:name=".ui.login.LoginActivity">

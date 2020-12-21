@@ -1,16 +1,13 @@
-package com.example.zxcode.fragments
+package com.example.usercenter.ui.adduser.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.usercenter.R
-import com.example.zxcode.ZxActivity
-import kotlinx.android.synthetic.main.layout_search_people.*
 
-class Search_People_Fragment :Fragment(){
+class Contocts_Fridends_Fragment :Fragment(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -20,14 +17,11 @@ class Search_People_Fragment :Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.layout_search_people, null)
+        val view = inflater.inflate(R.layout.layout_contacts_friend, null)
         return view
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-//        searchpeople_tv_zxing.setOnClickListener {
-//            startActivity( Intent(context, ZxActivity::class.java))
-//        }
     }
 }
