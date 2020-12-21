@@ -22,6 +22,11 @@ public class ZipUtil {
             e.printStackTrace();
         }
     }
+
+    public static void unZipFolder(String zipFileString,String srcFileString){
+
+    }
+
     private static void ZipFiles(String folderString, String fileString, ZipOutputStream zipOutputSteam) {
         try {
             if (zipOutputSteam == null)
@@ -40,19 +45,23 @@ public class ZipUtil {
             } else {
                 //文件夹
                 String fileList[] = file.list();
-                //没有子文件和压缩
-                if (fileList.length <= 0) {
+                if(fileList==null || fileList.length==0){
+                    //空文件处理
                     ZipEntry zipEntry = new ZipEntry(fileString + File.separator);
                     zipOutputSteam.putNextEntry(zipEntry);
                     zipOutputSteam.closeEntry();
+                }else{
+                    //递归目录
+                    for (int i = 0; i < fileList.length; i++) {
+                        ZipFiles(folderString + fileString + "/", fileList[i], zipOutputSteam);
+                    }
                 }
-                //子文件和递归
-                for (int i = 0; i < fileList.length; i++) {
-                    ZipFiles(folderString + fileString + "/", fileList[i], zipOutputSteam);
-                }
+
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+
 }

@@ -15,7 +15,8 @@ class MediaActivity : AppCompatActivity() {
         start_audio.setOnClickListener {
             Toast.makeText(this, "开始录制", Toast.LENGTH_SHORT).show()
 //            AudioUtil.getInstance().start()
-            camera.start()
+//            camera.start()
+            ZipUtil.ZipFolder("/sdcard/Download/test","/sdcard/Download")
         }
         stop_audio.setOnClickListener {
 //            AudioUtil.getInstance().stop()
@@ -34,5 +35,8 @@ class MediaActivity : AppCompatActivity() {
             }
 
         })
+
+
+
     }
 }
