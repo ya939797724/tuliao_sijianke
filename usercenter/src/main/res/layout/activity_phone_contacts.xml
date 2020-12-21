@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.adduser.PhoneContactsActivity">
+    tools:context="com.example.usercenter.ui.adduser.PhoneContactsActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="60dp"
         android:background="#339999"
         android:orientation="vertical"
         android:gravity="bottom"

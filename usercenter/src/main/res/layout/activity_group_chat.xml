@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.adduser.GroupChatActivity">
+    tools:context="com.example.usercenter.ui.adduser.GroupChatActivity">
     <LinearLayout
         android:id="@+id/chat_ll"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="50dp"
         android:layout_weight="1"
         android:background="#339999"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp">
+            android:layout_height="50dp">
 
             <ImageView
                 android:id="@+id/groupchatt_return"
@@ -32,7 +31,7 @@
                 android:layout_centerHorizontal="true"
                 android:text="群聊"
                 android:textColor="#ffffff"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -50,88 +49,57 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/chat_ll"
-
         />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_above="@+id/chat_ll_tu"
+        android:layout_height="40dp"
+        android:layout_above="@+id/groupchat_ll"
         android:orientation="horizontal"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:background="#E6E5E5"
         >
 
         <EditText
+            android:id="@+id/et_send_msg"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
-            android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:background="@drawable/edbackground_write"
+            android:paddingLeft="@dimen/dp_10"
+            android:background="#fff"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintBottom_toBottomOf="parent" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#fff"
-            android:background="@drawable/send_back"
+            android:layout_width="60dp"
+            android:layout_height="@dimen/dp_40"
+            android:textColor="#454545"
+            android:background="#E6E5E5"
             android:text="发送"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
-            android:textSize="20sp" />
+            />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginBottom="10dp"
-        android:id="@+id/chat_ll_tu"
+        android:id="@+id/groupchat_ll"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
-
-        <ImageView
-            android:padding="5dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/yuyin" />
-
-        <ImageView
-            android:padding="8dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/picture" />
-
-        <ImageView
-            android:padding="8dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/camera" />
-
-        <ImageView
-            android:padding="5dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/myloc" />
-
-        <ImageView
-            android:padding="5dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/biaoqing" />
-
-        <ImageView
-            android:padding="5dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/kuai" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/group_comm"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            app:tl_tab_space_equal="true"
+            android:paddingTop="5dp"
+            android:background="#E6E5E5"
+            android:layout_alignParentBottom="true"/>
+        <FrameLayout
+            android:id="@+id/group_fl"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:visibility="gone"
+            android:layout_below="@+id/personchat_comm" />
     </LinearLayout>
+
 </RelativeLayout>
