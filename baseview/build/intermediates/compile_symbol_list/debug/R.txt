@@ -458,6 +458,7 @@ int attr insetForeground 0x0
 int attr inverse 0x0
 int attr isLightTheme 0x0
 int attr isMaterialTheme 0x0
+int attr isShow 0x0
 int attr itemBackground 0x0
 int attr itemFillColor 0x0
 int attr itemHorizontalPadding 0x0
@@ -3742,8 +3743,9 @@ int styleable CustomAttribute_customFloatValue 5
 int styleable CustomAttribute_customIntegerValue 6
 int styleable CustomAttribute_customPixelDimension 7
 int styleable CustomAttribute_customStringValue 8
-int[] styleable CustomMenuLayout { 0x0 }
+int[] styleable CustomMenuLayout { 0x0, 0x0 }
 int styleable CustomMenuLayout_hideDirection 0
+int styleable CustomMenuLayout_isShow 1
 int[] styleable DrawerArrowToggle { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable DrawerArrowToggle_arrowHeadLength 0
 int styleable DrawerArrowToggle_arrowShaftLength 1

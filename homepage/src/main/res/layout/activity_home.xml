@@ -28,6 +28,7 @@
         />
 
     <baseview.customview.CustomMenuLayout
+        android:id="@+id/menu_layout_right"
         android:layout_width="200dp"
         android:layout_height="250dp"
         android:background="@drawable/timerback"
@@ -42,14 +43,15 @@
         android:layout_gravity="center_vertical|right"
         >
         <baseview.customview.CustomMenuLayout
+            android:id="@+id/menu_layout_left_01"
             android:layout_width="60dp"
             android:layout_height="200dp"
             android:background="@drawable/timerback"
-
             app:hideDirection="left"
             >
         </baseview.customview.CustomMenuLayout>
         <baseview.customview.CustomMenuLayout
+            android:id="@+id/menu_layout_left_02"
             android:layout_width="60dp"
             android:layout_height="200dp"
             android:background="@drawable/timerback"

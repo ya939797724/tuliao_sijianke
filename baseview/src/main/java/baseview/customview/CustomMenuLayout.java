@@ -28,6 +28,7 @@ public class CustomMenuLayout extends CoordinatorLayout {
     private CheckBox checkBox;
     private float start = 0;
     private float end;
+    private boolean aBoolean;
 
     public CustomMenuLayout(@NonNull Context context) {
         super(context);
@@ -37,7 +38,9 @@ public class CustomMenuLayout extends CoordinatorLayout {
     public CustomMenuLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.CustomMenuLayout);
-        hideDirection= attributes.getInteger(R.styleable.CustomMenuLayout_hideDirection,2);
+        hideDirection = attributes.getInteger(R.styleable.CustomMenuLayout_hideDirection, 2);
+        if (attributes.getBoolean(R.styleable.CustomMenuLayout_isShow, false)) aBoolean = true;
+        else aBoolean = false;
         init(context);
     }
 
@@ -85,7 +88,7 @@ public class CustomMenuLayout extends CoordinatorLayout {
                 params.gravity = Gravity.CENTER_VERTICAL | Gravity.LEFT;
                 checkBox.setBackgroundResource(R.drawable.check_box);
                 checkBox.setChecked(true);
-                this.setPadding(10,0,0,0);
+                this.setPadding(10, 0, 0, 0);
                 break;
             case 2://right
                 params.gravity = Gravity.CENTER_VERTICAL | Gravity.RIGHT;
@@ -103,11 +106,11 @@ public class CustomMenuLayout extends CoordinatorLayout {
         addView(checkBox);
     }
 
-    private void hide() {
+    public void hide() {
         getObjectAnimator(-end, -start);
     }
 
-    private void show() {
+    public void show() {
         getObjectAnimator(start, end);
     }
 
@@ -143,6 +146,10 @@ public class CustomMenuLayout extends CoordinatorLayout {
                 .start();
     }
 
+    public CheckBox getCheckBox() {
+        return checkBox;
+    }
+
     public int getHideDirection() {
         return hideDirection;
     }
@@ -150,6 +157,7 @@ public class CustomMenuLayout extends CoordinatorLayout {
     public void setHideDirection(int hideDirection) {
         this.hideDirection = hideDirection;
     }
+
     public static int LEFT = 0;
     public static int RIGHT = 0;
 }

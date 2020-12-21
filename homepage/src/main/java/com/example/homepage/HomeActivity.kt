@@ -38,6 +38,7 @@ class HomeActivity : BaseMapActivity() {
         iv_contacts.setOnClickListener {
             ARouter.getInstance().build(ActivitySwitch.UserCenter.CONTACTS_ACT).navigation()
         }
+
     }
 
     override fun bandLayout(): Int {
