@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
+import com.example.common.arouter.ActivitySwitch
 import com.example.usercenter.R
 import com.example.usercenter.ui.adduser.entity.CusTabEntity
 import com.example.usercenter.ui.adduser.fragments.*
@@ -14,12 +17,17 @@ import kotlinx.android.synthetic.main.activity_group_chat.*
 import kotlinx.android.synthetic.main.activity_person_chat.*
 import kotlinx.android.synthetic.main.activity_person_chat.personchat_comm
 
+/**
+ * 群组聊天
+ */
+@Route(path = ActivitySwitch.UserCenter.GROUP_CHAT_ACT)
 class GroupChatActivity : AppCompatActivity() {
     var personchatcus= arrayListOf<CustomTabEntity>()
     var personchatfragments= arrayListOf<Fragment>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_group_chat)
+        ARouter.getInstance().inject(this)
         commtabInit()
 
         et_send_msg.setOnClickListener {

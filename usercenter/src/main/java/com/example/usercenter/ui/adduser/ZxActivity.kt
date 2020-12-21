@@ -5,18 +5,21 @@ import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
+import com.example.common.arouter.ActivitySwitch
 import com.example.usercenter.R
 import com.example.usercenter.ui.adduser.SaoActivity
 
 import com.uuzuche.lib_zxing.activity.CaptureActivity
 import com.uuzuche.lib_zxing.activity.CodeUtils
 import kotlinx.android.synthetic.main.activity_zx.*
-
+@Route(path = ActivitySwitch.UserCenter.ZX_ACT)
 class ZxActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_zx)
-
+        ARouter.getInstance().inject(this)
         val mBitmap = CodeUtils.createImage("我是啊哈哈", 400, 400, BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher))
         zx_img.setImageBitmap(mBitmap)
         Toast.makeText(this,"打开了扫描二维码",Toast.LENGTH_SHORT).show()

@@ -9,11 +9,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:background="#339999"
         android:orientation="vertical"
-        android:gravity="bottom"
-        android:padding="10dp">
+        android:gravity="bottom">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -36,6 +35,7 @@
                 android:textStyle="bold" />
 
             <ImageView
+                android:id="@+id/iv_add_user"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
@@ -49,9 +49,10 @@
     <com.flyco.tablayout.CommonTabLayout
         android:id="@+id/contacts_comm"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/dp_40"
+        android:background="#339999"
         app:tl_textSelectColor="#ffffff"
-        app:tl_textUnselectColor="#000000"
+        app:tl_textUnselectColor="#BFBFBF"
         app:tl_tab_space_equal="true"/>
     <FrameLayout
         android:id="@+id/contacts_fm"

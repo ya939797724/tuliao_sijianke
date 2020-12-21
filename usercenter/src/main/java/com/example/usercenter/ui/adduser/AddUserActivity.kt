@@ -5,13 +5,19 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
+import com.example.common.arouter.ActivitySwitch
 import com.example.usercenter.R
 
 import com.example.zxcode.fragments.Search_Flock_Fragment
 import com.example.zxcode.fragments.Search_People_Fragment
 import kotlinx.android.synthetic.main.activity_add_user.*
 
-
+/**
+ * 添加用户
+ */
+@Route(path = ActivitySwitch.UserCenter.ADD_USER_ACT)
 class AddUserActivity : AppCompatActivity() {
     var arrayAddUser = arrayOf<String>("找人","找群")
     var addUserFragments= arrayListOf<Fragment>()
@@ -19,6 +25,7 @@ class AddUserActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_user)
+        ARouter.getInstance().inject(this)
         /**
          * 添加群或者联系人的总viewpager
          */
