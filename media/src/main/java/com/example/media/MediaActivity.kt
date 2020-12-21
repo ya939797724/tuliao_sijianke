@@ -16,12 +16,14 @@ class MediaActivity : AppCompatActivity() {
             Toast.makeText(this, "开始录制", Toast.LENGTH_SHORT).show()
 //            AudioUtil.getInstance().start()
 //            camera.start()
-            ZipUtil.ZipFolder("/sdcard/Download/test","/sdcard/Download")
+//            ZipUtil.ZipFolder("/sdcard/Download/test","/sdcard/Download")
+
+            ZipUtil.unZipFolder("/sdcard/neoRecorder/MIC_20201221_090741.mp31608512866079.zip","/sdcard/neoRecorder/MIC_20201221_090741.mp3")
         }
         stop_audio.setOnClickListener {
+//            Toast.makeText(this, "停止录制", Toast.LENGTH_SHORT).show()
 //            AudioUtil.getInstance().stop()
-            Toast.makeText(this, "停止录制", Toast.LENGTH_SHORT).show()
-            camera.stop()
+//            camera.stop()
         }
 
         AudioUtil.getInstance().setRecording(object : AudioUtil.Recording{
