@@ -1,3 +1,4 @@
+include ':action'
 include ':media'
 include ':homepage'
 include ':home'
