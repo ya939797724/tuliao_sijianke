@@ -11,8 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="#339999"
-        android:orientation="vertical"
-        android:padding="10dp">
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -22,15 +21,16 @@
                 android:id="@+id/adduser_return"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_baseline_arrow_left_24" />
+                android:src="@drawable/ic_baseline_chevron_left_24" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 android:text="添加"
                 android:textColor="#ffffff"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </RelativeLayout>
 
@@ -38,9 +38,11 @@
             android:id="@+id/adduser_tv_slid"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:tl_tab_space_equal="true"
             app:tl_textSelectColor="#ffffff"
             app:tl_textUnselectColor="#000000"
-            app:tl_tab_space_equal="true"/>
+            app:tl_indicator_color="#FFC107"
+            />
     </LinearLayout>
 
     <androidx.viewpager.widget.ViewPager

@@ -12,6 +12,7 @@
         android:layout_height="100dp"
         android:background="#339999"
         android:orientation="vertical"
+        android:gravity="bottom"
         android:padding="10dp">
 
         <RelativeLayout
@@ -22,9 +23,10 @@
                 android:id="@+id/contacts_return"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_baseline_arrow_left_24" />
+                android:src="@drawable/ic_baseline_chevron_left_24" />
 
             <TextView
+                android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"

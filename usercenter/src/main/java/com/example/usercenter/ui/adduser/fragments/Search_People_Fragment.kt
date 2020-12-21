@@ -26,8 +26,8 @@ class Search_People_Fragment :Fragment(){
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        searchpeople_tv_zxing.setOnClickListener {
-            startActivity( Intent(context, ZxActivity::class.java))
-        }
+//        searchpeople_tv_zxing.setOnClickListener {
+//            startActivity( Intent(context, ZxActivity::class.java))
+//        }
     }
 }

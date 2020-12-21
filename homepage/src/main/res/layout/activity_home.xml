@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="left"
     tools:context=".HomeActivity">
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -55,7 +56,9 @@
             app:hideDirection="left"
             >
         </baseview.customview.CustomMenuLayout>
+
     </LinearLayout>
+        <include layout="@layout/home_header" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <com.google.android.material.navigation.NavigationView
         android:layout_width="250dp"
@@ -64,4 +67,5 @@
         app:headerLayout="@layout/user_header"
         app:menu="@menu/user_menu"
         />
+
 </androidx.drawerlayout.widget.DrawerLayout>
