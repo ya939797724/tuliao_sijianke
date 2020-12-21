@@ -11,7 +11,7 @@
         android:id="@+id/chat_ll"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#339999"
+        android:background="#454545"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -64,9 +64,11 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_above="@+id/personchat_ll"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="#e8e8e8"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        >
 
         <EditText
             android:id="@+id/personchat_et_msg"
@@ -75,18 +77,20 @@
             android:layout_alignParentBottom="true"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:background="@drawable/edbackground_write"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            android:background="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            />
 
         <Button
             android:id="@+id/personchat_bt_sendmsg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/send_back"
+            android:background="#fff"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
             android:text="发送"
-            android:textColor="#fff"
+            android:textColor="#000"
             android:textSize="20sp" />
 
     </LinearLayout>

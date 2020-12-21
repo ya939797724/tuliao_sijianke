@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.usercenter.R
 
 class Flock_Fridends_Fragment :Fragment(){
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +17,11 @@ class Flock_Fridends_Fragment :Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+        var view = inflater.inflate(
+            R.layout.activity_test,
+            null
+        )
+        return view
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F7F7"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#e8e8e8"
     android:orientation="vertical">
 
     <EditText
@@ -10,22 +11,23 @@
         android:id="@+id/searchflock_ed"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/searchpeople"
         android:drawableLeft="@drawable/ic_baseline_search_24"
         android:hint="搜索群账号/群名称"
         android:paddingLeft="20dp"
-        android:textSize="20sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ddd"/>
+        android:textSize="20sp"
+        android:background="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        />
     <TextView
         android:drawablePadding="10dp"
         android:id="@+id/searchflock_tv_addflock"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
         android:background="#fff"
         android:drawableLeft="@drawable/ic_baseline_add_box_24"
         android:gravity="center|left"
@@ -33,21 +35,14 @@
         android:text="创建群"
         android:textColor="#969696"
         android:textSize="20dp" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ddd"/>
-    <View
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ddd"/>
     <TextView
         android:drawablePadding="10dp"
         android:id="@+id/searchflock_tv_zxing"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
         android:background="#fff"
         android:drawableLeft="@drawable/ic_baseline_crop_free_24"
         android:gravity="center|left"
@@ -55,19 +50,27 @@
         android:text="扫码进群"
         android:textColor="#969696"
         android:textSize="20dp" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ddd"/>
     <com.flyco.tablayout.SlidingTabLayout
         android:id="@+id/searchflock_tab"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        app:tl_tab_space_equal="true"
+        android:background="#fff"
+        app:tl_textsize="20sp"
+        app:tl_textSelectColor="#454545"
+        app:tl_textUnselectColor="#717171"
+        />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/searchflock_vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="30dp" />
+        android:background="#fff"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        />
 </LinearLayout>

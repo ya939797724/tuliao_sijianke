@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#339999"
+        android:background="#454545"
         android:orientation="vertical"
         android:gravity="bottom">
 
@@ -31,12 +31,12 @@
                 android:layout_centerHorizontal="true"
                 android:text="联系人"
                 android:textColor="#ffffff"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/iv_add_user"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/dp_40"
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/ic_baseline_person_add_24" />
@@ -45,12 +45,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/contacts_rec"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="200dp"
+        android:visibility="gone"
+        />
     <com.flyco.tablayout.CommonTabLayout
         android:id="@+id/contacts_comm"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_40"
-        android:background="#339999"
+        android:layout_height="50dp"
+        android:background="#454545"
         app:tl_textSelectColor="#ffffff"
         app:tl_textUnselectColor="#BFBFBF"
         app:tl_tab_space_equal="true"/>

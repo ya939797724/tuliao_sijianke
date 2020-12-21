@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="#339999"
+        android:background="#454545"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -41,7 +41,6 @@
             app:tl_tab_space_equal="true"
             app:tl_textSelectColor="#ffffff"
             app:tl_textUnselectColor="#DADADA"
-            app:tl_indicator_color="#FFC107"
             />
     </LinearLayout>
 

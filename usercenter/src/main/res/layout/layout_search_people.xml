@@ -2,65 +2,58 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F7F7"
+    android:background="#e8e8e8"
     android:orientation="vertical">
 
     <EditText
         android:id="@+id/searchpeople_ed"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/searchpeople"
+        android:background="#fff"
         android:drawableLeft="@drawable/ic_baseline_search_24"
         android:hint="搜索账号/手机号码/昵称"
-        android:paddingLeft="20dp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ddd"/>
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        />
     <TextView
         android:id="@+id/searchflock_tv_addflock"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#fff"
+        android:layout_height="60dp"
         android:drawablePadding="10dp"
         android:drawableLeft="@drawable/insert_phone"
         android:gravity="center|left"
         android:paddingLeft="30dp"
         android:text="添加手机联系人"
         android:textColor="#969696"
-        android:textSize="20dp" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ddd"/>
-    <View
+        android:textSize="20dp"
         android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ddd"/>
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="#fff"
+        />
     <TextView
         android:id="@+id/searchflock_tv_zxing"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="5dp"
-        android:background="#fff"
+        android:layout_height="60dp"
         android:drawablePadding="10dp"
         android:drawableLeft="@drawable/ic_baseline_crop_free_24"
         android:gravity="center|left"
         android:paddingLeft="30dp"
         android:text="面对面加好友"
         android:textColor="#969696"
-        android:textSize="20dp" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ddd"/>
-
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="#fff"
+        />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/searchpeople_rec"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="40dp" />
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        />
 </LinearLayout>

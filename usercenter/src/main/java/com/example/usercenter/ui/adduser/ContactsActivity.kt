@@ -37,5 +37,10 @@ class ContactsActivity : AppCompatActivity() {
         iv_add_user.setOnClickListener {
             ARouter.getInstance().build(ActivitySwitch.UserCenter.ADD_USER_ACT).navigation()
         }
+        contacts_return.setOnClickListener {
+            finish()
+        }
+
+
     }
 }

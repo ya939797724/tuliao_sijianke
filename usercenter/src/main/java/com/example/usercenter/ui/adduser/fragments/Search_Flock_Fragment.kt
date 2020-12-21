@@ -14,11 +14,12 @@ import com.example.usercenter.ui.adduser.fragments.Flock_Fans_Fragment
 import com.example.usercenter.ui.adduser.fragments.Flock_Fridends_Fragment
 import com.example.usercenter.ui.adduser.fragments.Flock_Game_Fragment
 import kotlinx.android.synthetic.main.layout_search_flock.*
+import java.util.ArrayList
 
 
 class Search_Flock_Fragment :Fragment(){
     var arrayFlock = arrayOf<String>("游戏","粉丝","交友")
-    var flockFragments= arrayListOf<Fragment>()
+    var flockFragments=ArrayList<Fragment>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -36,14 +37,12 @@ class Search_Flock_Fragment :Fragment(){
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
 
         searchflock_tv_addflock.setOnClickListener {
             startActivity(Intent(context,CreateFlockActivity::class.java))
         }
-        //TODO 这个地方的上下文可能有问题
-        searchflock_tab.setViewPager(searchflock_vp,arrayFlock,
-            context as FragmentActivity?,flockFragments)
-        super.onActivityCreated(savedInstanceState)
-
+        searchflock_tab.setViewPager(searchflock_vp,arrayFlock, activity,flockFragments)
+        searchflock_tab.setViewPager(searchflock_vp,arrayFlock,activity,flockFragments)
     }
 }
