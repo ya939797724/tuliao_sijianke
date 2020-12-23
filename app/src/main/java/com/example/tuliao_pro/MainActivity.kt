@@ -2,6 +2,7 @@ package com.example.tuliao_pro
 
 import android.os.Build
 import android.os.Bundle
+import android.widget.Switch
 //import com.alibaba.android.arouter.launcher.ARouter
 import com.example.common.arouter.ActivitySwitch
 import androidx.appcompat.app.AppCompatActivity

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#E8E8E8"
-    tools:context="com.example.usercenter.ui.adduser.CreateFlockActivity">
+    tools:context="com.example.usercenter.ui.flock.CreateFlockActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.example.usercenter.ui.adduser.fragments
+package com.example.usercenter.ui.flock.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.usercenter.R
 
-class Chat_Camera_Fragment :Fragment() {
+class Flock_Fans_Fragment :Fragment(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -17,7 +17,10 @@ class Chat_Camera_Fragment :Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.layout_camera_fragment, null)
+        var view = inflater.inflate(
+            R.layout.activity_test,
+            null
+        )
         return view
     }
 

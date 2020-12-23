@@ -6,18 +6,18 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <application>
-        <activity android:name=".ui.adduser.PhoneContactsActivity"></activity>
-        <activity android:name=".ui.adduser.ContactsActivity" />
-        <activity android:name=".ui.adduser.GroupChatActivity" />
-        <activity android:name=".ui.adduser.PersonChatActivity" />
-        <activity android:name=".ui.adduser.ChatSettingActivity" />
-        <activity android:name=".ui.adduser.SaoActivity" />
-        <activity android:name=".ui.adduser.InformationActivity" />
+        <activity android:name=".ui.contacts.PhoneContactsActivity"></activity>
+        <activity android:name=".ui.contacts.ContactsActivity" />
+        <activity android:name=".ui.chat.GroupChatActivity" />
+        <activity android:name=".ui.chat.PersonChatActivity" />
+        <activity android:name=".ui.setting.ChatSettingActivity" />
+        <activity android:name=".ui.zxing.SaoActivity" />
+        <activity android:name=".ui.information.InformationActivity" />
         <activity android:name=".ui.TestActivity">
         </activity>
-        <activity android:name=".ui.adduser.InformationActivity"
+        <activity android:name=".ui.information.InformationActivity"
             tools:ignore="DuplicateActivity" />
-        <activity android:name=".ui.adduser.CreateFlockActivity" />
+        <activity android:name=".ui.flock.CreateFlockActivity" />
         <activity android:name="com.example.zxcode.AddUserActivity" />
         <activity android:name="com.example.zxcode.ZxActivity" />
         <activity android:name=".ui.register.RegisterActivity" />

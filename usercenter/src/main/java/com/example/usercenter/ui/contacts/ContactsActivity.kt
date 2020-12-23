@@ -1,4 +1,4 @@
-package com.example.usercenter.ui.adduser
+package com.example.usercenter.ui.contacts
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,10 +7,10 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.example.common.arouter.ActivitySwitch
 import com.example.usercenter.R
-import com.example.usercenter.ui.adduser.entity.CusTabEntity
-import com.example.usercenter.ui.adduser.fragments.Contocts_Flock_Fragment
-import com.example.usercenter.ui.adduser.fragments.Contocts_Fridends_Fragment
-import com.example.usercenter.ui.adduser.fragments.Contocts_Group_Fragment
+import com.example.usercenter.model.api.bean.CusTabEntity
+import com.example.usercenter.ui.contacts.fragment.Contocts_Flock_Fragment
+import com.example.usercenter.ui.contacts.fragment.Contocts_Fridends_Fragment
+import com.example.usercenter.ui.contacts.fragment.Contocts_Group_Fragment
 import com.flyco.tablayout.listener.CustomTabEntity
 import kotlinx.android.synthetic.main.activity_contacts.*
 
@@ -28,9 +28,27 @@ class ContactsActivity : AppCompatActivity() {
         contactsfragments.add(Contocts_Fridends_Fragment())
         contactsfragments.add(Contocts_Group_Fragment())
         contactsfragments.add(Contocts_Flock_Fragment())
-        contactscustabs.add(CusTabEntity("好友",0,0))
-        contactscustabs.add(CusTabEntity("分组",0,0))
-        contactscustabs.add(CusTabEntity("群聊",0,0))
+        contactscustabs.add(
+            CusTabEntity(
+                "好友",
+                0,
+                0
+            )
+        )
+        contactscustabs.add(
+            CusTabEntity(
+                "分组",
+                0,
+                0
+            )
+        )
+        contactscustabs.add(
+            CusTabEntity(
+                "群聊",
+                0,
+                0
+            )
+        )
         contacts_comm.setTabData(contactscustabs,this,R.id.contacts_fm,contactsfragments)
 
 

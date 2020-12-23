@@ -1,4 +1,4 @@
-package com.example.usercenter.ui.adduser.fragments
+package com.example.usercenter.ui.flock.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

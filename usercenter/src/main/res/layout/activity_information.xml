@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#e8e8e8"
-    tools:context="com.example.usercenter.ui.adduser.InformationActivity">
+    tools:context="com.example.usercenter.ui.information.InformationActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"

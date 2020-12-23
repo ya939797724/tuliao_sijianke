@@ -1,4 +1,4 @@
-package com.example.usercenter.ui.adduser
+package com.example.usercenter.ui.setting
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

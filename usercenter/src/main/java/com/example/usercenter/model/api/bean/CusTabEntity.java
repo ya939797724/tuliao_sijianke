@@ -1,4 +1,4 @@
-package com.example.usercenter.ui.adduser.entity;
+package com.example.usercenter.model.api.bean;
 
 import com.flyco.tablayout.listener.CustomTabEntity;
 

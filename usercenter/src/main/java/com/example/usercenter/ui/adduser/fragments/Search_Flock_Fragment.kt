@@ -6,13 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import com.example.usercenter.R
-import com.example.usercenter.ui.adduser.CreateFlockActivity
-import com.example.usercenter.ui.adduser.InformationActivity
-import com.example.usercenter.ui.adduser.fragments.Flock_Fans_Fragment
-import com.example.usercenter.ui.adduser.fragments.Flock_Fridends_Fragment
-import com.example.usercenter.ui.adduser.fragments.Flock_Game_Fragment
+import com.example.usercenter.ui.flock.CreateFlockActivity
+import com.example.usercenter.ui.flock.fragment.Flock_Fans_Fragment
+import com.example.usercenter.ui.flock.fragment.Flock_Fridends_Fragment
+import com.example.usercenter.ui.flock.fragment.Flock_Game_Fragment
 import kotlinx.android.synthetic.main.layout_search_flock.*
 import java.util.ArrayList
 
@@ -40,7 +38,8 @@ class Search_Flock_Fragment :Fragment(){
         super.onActivityCreated(savedInstanceState)
 
         searchflock_tv_addflock.setOnClickListener {
-            startActivity(Intent(context,CreateFlockActivity::class.java))
+            startActivity(Intent(context,
+                CreateFlockActivity::class.java))
         }
         searchflock_tab.setViewPager(searchflock_vp,arrayFlock, activity,flockFragments)
         searchflock_tab.setViewPager(searchflock_vp,arrayFlock,activity,flockFragments)

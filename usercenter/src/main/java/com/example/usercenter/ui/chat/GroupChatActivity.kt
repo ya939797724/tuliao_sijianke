@@ -1,4 +1,4 @@
-package com.example.usercenter.ui.adduser
+package com.example.usercenter.ui.chat
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,14 +8,11 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.example.common.arouter.ActivitySwitch
 import com.example.usercenter.R
-import com.example.usercenter.ui.adduser.entity.CusTabEntity
-import com.example.usercenter.ui.adduser.fragments.*
-import com.flyco.tablayout.CommonTabLayout
+import com.example.usercenter.model.api.bean.CusTabEntity
+import com.example.usercenter.ui.chat.fragment.*
 import com.flyco.tablayout.listener.CustomTabEntity
 import com.flyco.tablayout.listener.OnTabSelectListener
 import kotlinx.android.synthetic.main.activity_group_chat.*
-import kotlinx.android.synthetic.main.activity_person_chat.*
-import kotlinx.android.synthetic.main.activity_person_chat.personchat_comm
 
 /**
  * 群组聊天
@@ -47,12 +44,48 @@ class GroupChatActivity : AppCompatActivity() {
     }
 
     private fun commtabInit() {
-        personchatcus.add(CusTabEntity("",R.drawable.ic_record,R.drawable.ic_record))
-        personchatcus.add(CusTabEntity("",R.drawable.ic_image,R.drawable.ic_image))
-        personchatcus.add(CusTabEntity("",R.drawable.ic_camera,R.drawable.ic_camera))
-        personchatcus.add(CusTabEntity("",R.drawable.ic_location,R.drawable.ic_location))
-        personchatcus.add(CusTabEntity("",R.drawable.ic_smeil,R.drawable.ic_smeil))
-        personchatcus.add(CusTabEntity("",R.drawable.ic_type,R.drawable.ic_type))
+        personchatcus.add(
+            CusTabEntity(
+                "",
+                R.drawable.ic_record,
+                R.drawable.ic_record
+            )
+        )
+        personchatcus.add(
+            CusTabEntity(
+                "",
+                R.drawable.ic_image,
+                R.drawable.ic_image
+            )
+        )
+        personchatcus.add(
+            CusTabEntity(
+                "",
+                R.drawable.ic_camera,
+                R.drawable.ic_camera
+            )
+        )
+        personchatcus.add(
+            CusTabEntity(
+                "",
+                R.drawable.ic_location,
+                R.drawable.ic_location
+            )
+        )
+        personchatcus.add(
+            CusTabEntity(
+                "",
+                R.drawable.ic_smeil,
+                R.drawable.ic_smeil
+            )
+        )
+        personchatcus.add(
+            CusTabEntity(
+                "",
+                R.drawable.ic_type,
+                R.drawable.ic_type
+            )
+        )
         personchatfragments.add(Chat_Voice_Fragment())
         personchatfragments.add(Chat_Picture_Fragment())
         personchatfragments.add(Chat_Camera_Fragment())

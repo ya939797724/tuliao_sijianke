@@ -20,31 +20,31 @@
 
         </activity>
 
-        <activity android:name=".ui.adduser.PhoneContactsActivity">
+        <activity android:name=".ui.contacts.PhoneContactsActivity">
 
         </activity>
-        <activity android:name=".ui.adduser.ContactsActivity" />
-        <activity android:name=".ui.adduser.GroupChatActivity" >
+        <activity android:name=".ui.contacts.ContactsActivity" />
+        <activity android:name=".ui.chat.GroupChatActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.adduser.PersonChatActivity">
+        <activity android:name=".ui.chat.PersonChatActivity">
 
         </activity>
-        <activity android:name=".ui.adduser.ChatSettingActivity" >
+        <activity android:name=".ui.setting.ChatSettingActivity" >
 
         </activity>
 
-        <activity android:name=".ui.adduser.InformationActivity">
+        <activity android:name=".ui.information.InformationActivity">
 
         </activity>
-        <activity android:name=".ui.adduser.CreateFlockActivity" >
+        <activity android:name=".ui.flock.CreateFlockActivity" >
 
         </activity>
-        <activity android:name=".ui.adduser.SaoActivity"></activity>
+        <activity android:name=".ui.zxing.SaoActivity"></activity>
         <activity android:name="com.example.zxcode.AddUserActivity">
 
         </activity>

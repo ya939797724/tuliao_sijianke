@@ -1,4 +1,4 @@
-package com.example.usercenter.ui.adduser
+package com.example.usercenter.ui.contacts
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,13 +8,14 @@ import com.example.common.arouter.ActivitySwitch
 import com.example.usercenter.R
 
 /**
- * 消息页面
+ * 手机联系人
  */
-@Route(path = ActivitySwitch.UserCenter.INFORMATION_ACT)
-class InformationActivity : AppCompatActivity() {
+@Route(path = ActivitySwitch.UserCenter.PHONE_CONTACTS_ACT)
+class PhoneContactsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_information)
+        setContentView(R.layout.activity_phone_contacts)
         ARouter.getInstance().inject(this)
+
     }
 }

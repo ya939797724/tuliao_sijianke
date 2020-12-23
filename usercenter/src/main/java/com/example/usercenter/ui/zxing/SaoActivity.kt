@@ -1,4 +1,4 @@
-package com.example.usercenter.ui.adduser
+package com.example.usercenter.ui.zxing
 
 import android.content.Intent
 import android.graphics.Bitmap
