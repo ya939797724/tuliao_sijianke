@@ -77,4 +77,5 @@ dependencies {
     implementation libs.BaseRecyclerViewAdapterHelper
     api 'cn.yipianfengye.android:zxing-library:2.2'
     implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.github.florent37:expansionpanel:1.0.0'
 }

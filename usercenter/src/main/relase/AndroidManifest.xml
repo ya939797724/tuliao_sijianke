@@ -18,8 +18,6 @@
         <activity android:name=".ui.adduser.InformationActivity"
             tools:ignore="DuplicateActivity" />
         <activity android:name=".ui.adduser.CreateFlockActivity" />
-        <activity android:name=".ui.TestActivity"
-            tools:ignore="DuplicateActivity" />
         <activity android:name="com.example.zxcode.AddUserActivity" />
         <activity android:name="com.example.zxcode.ZxActivity" />
         <activity android:name=".ui.register.RegisterActivity" />
