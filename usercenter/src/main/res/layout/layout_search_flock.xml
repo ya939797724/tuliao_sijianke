@@ -60,8 +60,10 @@
         app:tl_tab_space_equal="true"
         android:background="#fff"
         app:tl_textsize="20sp"
-        app:tl_textSelectColor="#454545"
+        app:tl_textSelectColor="#fff"
         app:tl_textUnselectColor="#717171"
+        app:tl_indicator_height="60dp"
+        app:tl_indicator_color="#454545"
         />
 
     <androidx.viewpager.widget.ViewPager

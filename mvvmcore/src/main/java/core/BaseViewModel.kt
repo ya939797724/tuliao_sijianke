@@ -1,7 +1,9 @@
 package core
 
+import android.content.Context
 import androidx.lifecycle.*
 import core.api.IViewModel
+import dagger.hilt.android.qualifiers.ActivityContext
 import java.lang.NullPointerException
 
 abstract class BaseViewModel<S,E,M : IModel>:ViewModel() {

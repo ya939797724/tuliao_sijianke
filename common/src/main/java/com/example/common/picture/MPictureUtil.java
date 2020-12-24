@@ -27,13 +27,13 @@ public class MPictureUtil {
 
     private static IPicture picture = new GlideImpl();
 
-    void defaultImage(Context context, Object url, ImageView iv){
+    public void defaultImage(Context context, Object url, ImageView iv){
         picture.defaultImage(context, url, iv);
     }
-    void circletImage(Context context, Object url, ImageView iv){
+    public void circletImage(Context context, Object url, ImageView iv){
         picture.circletImage(context, url, iv);
     }
-    void roundImage(Context context, Object url,int radius, ImageView iv){
+    public void roundImage(Context context, Object url,int radius, ImageView iv){
         picture.roundImage(context, url, radius, iv);
     }
 }

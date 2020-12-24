@@ -2,9 +2,12 @@ package core.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import com.google.android.material.snackbar.Snackbar
 import core.BaseViewModel
 import core.api.IActivity
 
@@ -31,5 +34,14 @@ abstract class BaseMVVMActivity<VM : BaseViewModel<*,*,*>,V : ViewDataBinding> :
         val intent = Intent(this,activity)
         intent.putExtra(paramName,data)
         startActivity(intent)
+    }
+    override fun toast(msg: String?) {
+        Toast.makeText(this,msg, Toast.LENGTH_LONG).show()
+    }
+
+    override fun toast(msg: String?, view: View?) {
+        if (view != null && msg != null) {
+            Snackbar.make(view,msg, Snackbar.LENGTH_LONG).show()
+        }
     }
 }

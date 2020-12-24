@@ -19,7 +19,7 @@ class SPUtil<T>(val context: Context, val name: String, val defaultValue: T) :
         inputPreference(name,value)
     }
 
-    private fun <T> findPreference(name: String, defaultValue: T): T {
+     fun <T> findPreference(name: String, defaultValue: T): T {
         var result : Any
         result = when(defaultValue){
             is Long -> sp.getLong(name,defaultValue)
@@ -33,7 +33,7 @@ class SPUtil<T>(val context: Context, val name: String, val defaultValue: T) :
         }
         return result as T
     }
-    private fun <T> inputPreference(name: String,value:T){
+     fun <T> inputPreference(name: String,value:T){
         with(sp.edit()){
             when(value){
                 is Long -> putLong(name,value)

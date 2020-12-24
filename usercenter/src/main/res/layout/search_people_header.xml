@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e8e8"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+
+        >
+        <ImageButton
+            android:id="@+id/bt_search_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.16"
+            android:background="#fff"
+            android:src="@drawable/ic_baseline_search_24"
+            android:paddingLeft="20sp"
+            />
+        <EditText
+            android:id="@+id/search_add_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:hint="搜索账号/手机号码/昵称"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/dp_10"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/add_phone_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/insert_phone"
+        android:gravity="center|left"
+        android:paddingLeft="20sp"
+        android:text="添加手机联系人"
+        android:textColor="#969696"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        />
+    <TextView
+        android:id="@+id/face_to_face_add_user"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/ic_baseline_crop_free_24"
+        android:gravity="center|left"
+        android:paddingLeft="20sp"
+        android:text="面对面加好友"
+        android:textColor="#969696"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        />
+</LinearLayout>

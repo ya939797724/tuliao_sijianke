@@ -3,15 +3,13 @@ package com.example.zxcode
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentPagerAdapter
-import androidx.viewpager.widget.ViewPager
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.example.common.arouter.ActivitySwitch
 import com.example.usercenter.R
 
 import com.example.zxcode.fragments.Search_Flock_Fragment
-import com.example.zxcode.fragments.Search_People_Fragment
+import com.example.usercenter.ui.adduser.fragments.SearchPeopleFragment
 import kotlinx.android.synthetic.main.activity_add_user.*
 
 /**
@@ -30,7 +28,7 @@ class AddUserActivity : AppCompatActivity() {
          * 添加群或者联系人的总viewpager
          */
 
-        addUserFragments.add(Search_People_Fragment())
+        addUserFragments.add(SearchPeopleFragment())
         addUserFragments.add(Search_Flock_Fragment())
         adduser_tv_slid.setViewPager(useradd_vp,arrayAddUser,this,addUserFragments)
         /**

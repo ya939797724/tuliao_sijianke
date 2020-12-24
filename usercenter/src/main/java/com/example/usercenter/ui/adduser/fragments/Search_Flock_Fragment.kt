@@ -42,6 +42,5 @@ class Search_Flock_Fragment :Fragment(){
                 CreateFlockActivity::class.java))
         }
         searchflock_tab.setViewPager(searchflock_vp,arrayFlock, activity,flockFragments)
-        searchflock_tab.setViewPager(searchflock_vp,arrayFlock,activity,flockFragments)
     }
 }

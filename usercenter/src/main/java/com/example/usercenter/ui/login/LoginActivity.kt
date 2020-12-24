@@ -23,6 +23,8 @@ class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
     private var userToken by SPUtil<String>(this,"userToken","")
     private var usernameSp by SPUtil<String>(this,"username","")
     private var pwdSp by SPUtil<String>(this,"pwd","")
+    private var userIdSp by SPUtil<Int>(this,"userId",0)
+
     //判断是否需要存储密码
     private var isSavePwd by SPUtil<Boolean>(this,"isSavePwd",false)
     //成员变量用户名密码
@@ -63,6 +65,7 @@ class LoginActivity : BaseMVVMActivity<LoginViewModel,ActivityLoginBinding>() {
         //登录成功回调
         viewModel.netSuccess.observe(this, Observer {
             userToken = it.data.token//sp添加token
+            userIdSp = it.data.id
             RetrofitFactory.setToken(userToken)//网络请求添加token
             Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show()
             if(isSavePwd){//sp保存密码
